@@ -1,0 +1,3 @@
+Class Selectors: .pill-button, .page_body, .widget, .centered, .footer, .blog-name, .PageList, .overflowable-contents, .return_link, .BlogArchive, .post-count, .FeaturedPost, .post-outer-container, .post-title, .post-stream-title, .post-text, .post-byline, .byline, blockquote, .post-icon, .post, .thumb, .post-body, .snippet-thumbnail, .comment-link, .num_comments, .post-filter-message, .search-label, .search-query, .subscribe-button, .post-share-buttons, .post-share-buttons-bottom, .post-share-buttons-top, .clear-sharing, .sharing, .sharing-button, .sharing-platform-button, .flat-button, .flat-icon-button, .svg-icon-24, .svg-icon-24-button.
+
+ID Selectors: #page_body, #comment-holder, #comment-editor, #blog-pager.
