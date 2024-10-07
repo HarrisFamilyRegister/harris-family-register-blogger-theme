@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Channels</title>
+    <style>
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #131314; /* Match your main site background */
+            color: #ececeb; /* Match your main site text color */
+            font-family: 'IM Fell English', serif; /* Match your main site font */
+        }
+        .youtube-page-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .main-content-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: none;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .table-of-contents {
+            position: sticky;
+            top: 20px;
+            padding: 20px;
+            background-color: #1c1c1e;
+            border-radius: 8px;
+            color: #ececeb;
+            height: fit-content;
+            width: 300px;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        .table-of-contents h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .table-of-contents ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .table-of-contents li {
+            margin-bottom: 10px;
+        }
+        .table-of-contents a {
+            color: #ececeb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        .table-of-contents a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 5px #ececeb;
+        }
+        .main-content {
+            flex-grow: 1;
+            width: calc(100% - 320px);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .categories-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .channel-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .channel-item {
+            background-color: #1c1c1e;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            color: #ececeb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .channel-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+       .channel-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 1024px) {
+            .main-content-wrapper {
+                flex-direction: column;
+            }
+            .table-of-contents {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+                width: 100%;
+                margin-left: 0;
+            }
+            .main-content {
+                width: 100%;
+            }
+            .channel-list {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }      
+        @media (max-width: 768px) {
+            .channel-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }       
+        @media (max-width: 480px) {
+            .channel-list {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            .table-of-contents, .channel-item {
+                padding: 15px;
+            }
+            .table-of-contents h2 {
+                font-size: 20px;
+            }
+            .table-of-contents ul {
+                font-size: 14px;
+            }
+            .channel-icon {
+                width: 80px;
+                height: 80px;
+          }
+    </style>
+</head>
+<body>
+
+<div class='youtube-page-container'>
+        <div class="main-content-wrapper">
+            <nav class="table-of-contents">
+                <h2>Table of Contents</h2>
+                <ul>
+      <li><a href="#computer-science">000 – Computer Science, Information And General Works</a></li>
+      <li><a href="#philosophy-and-psychology">100 – Philosophy And Psychology</a></li>
+      <li><a href="#religion">200 – Religion</a></li>
+      <li><a href="#social-sciences">300 – Social Sciences</a></li>
+      <li><a href="#language">400 – Language</a></li>
+      <li><a href="#pure-science">500 – Pure Science</a></li>
+      <li><a href="#technology">600 – Technology</a></li>
+      <li><a href="#arts-recreation">700 – Arts And Recreation</a></li>
+      <li><a href="#literature">800 – Literature</a></li>
+      <li><a href="#history-geography">900 – History And Geography</a></li>
+    </ul>
+  </nav>
+
+<div class="main-content">
+  <div class="categories-container">
+    <ul class="channel-list">
+        <!-- Category: 000 – Computer Science, Information And General Works -->
+        <li class="channel-item" id="computer-science">
+          <h1>000 – Computer Science, Information And General Works</h1>
+          <p>Content related to computer science, information technology, and general knowledge will go here.</p>
+        </li>
+
+        <!-- Category: 100 – Philosophy And Psychology -->
+        <li class="channel-item" id="philosophy-and-psychology">
+          <h1>100 – Philosophy And Psychology</h1>
+          <p>Content related to philosophy and psychology will go here.</p>
+        </li>
+
+        <!-- Category: 200 – Religion -->
+        <li class="channel-item" id="religion">
+          <h1>200 – Religion</h1>
+          <p>Content related to religion will go here.</p>
+        </li>
+
+        <!-- Category: 300 – Social Sciences -->
+        <li class="channel-item" id="social-sciences">
+          <h1>300 – Social Sciences</h1>
+          <p>Content related to social sciences will go here.</p>
+        </li>
+
+        <!-- Category: 400 – Language -->
+        <li class="channel-item" id="language">
+          <h1>400 – Language</h1>
+          <p>Content related to language studies will go here.</p>
+        </li>
+
+        <!-- Category: 500 – Pure Science -->
+        <li class="channel-item" id="pure-science">
+          <h1>500 – Pure Science</h1>
+          <p>Content related to pure science will go here.</p>
+        </li>
+
+        <!-- Category: 600 – Technology -->
+        <li class="channel-item" id="technology">
+          <h1>600 – Technology</h1>
+          <p>Content related to technology will go here.</p>
+        </li>
+
+        <!-- Category: 700 – Arts And Recreation -->
+        <li class="channel-item" id="arts-recreation">
+          <h1>700 – Arts And Recreation</h1>
+          <ul class="sub-channel-list">
+            <li class="channel-item">
+              <h3>Karolina Żebrowska</h3>
+              <a href="https://www.youtube.com/c/Karolina%C5%BCebrowskax" rel="noopener noreferrer" target="_blank">
+                <img alt="Karolina Żebrowska channel icon" class="channel-icon" src="https://yt3.googleusercontent.com/ytc/AIdro_nY1T7cH_lxcwDP5pKW3pLWhtfo2BmY2Rwk-BgpXfXoZQU=s176-c-k-c0x00ffffff-no-rj-mo" />
+              </a>
+            </li>
+            <li class="channel-item">
+              <h3>Perspective</h3>
+              <a href="https://www.youtube.com/@PerspectiveArts" rel="noopener noreferrer" target="_blank">
+                <img alt="Perspective channel icon" class="channel-icon" src="https://yt3.googleusercontent.com/ytc/AIdro_k_2fVL3faKBMWaDOoKlnBsKJPTvS0KPhadaIhtjpQWVg=s160-c-k-c0x00ffffff-no-rj" />
+              </a>
+            </li>
+            <li class="channel-item">
+              <h3>The Art Assignment</h3>
+              <a href="https://www.youtube.com/@theartassignment" rel="noopener noreferrer" target="_blank">
+                <img alt="The Art Assignment channel icon" class="channel-icon" src="https://yt3.googleusercontent.com/ytc/AIdro_l0VVOo2oH5LYz7KXtQNzjk2T0Uz_ls3j2BNUL9OXIXNzk=s160-c-k-c0x00ffffff-no-rj" />
+              </a>
+            </li>
+            <li class="channel-item">
+              <h3>Justine Leconte</h3>
+              <a href="https://www.youtube.com/@justineleconte" rel="noopener noreferrer" target="_blank">
+                <img alt="Justine Leconte channel icon" class="channel-icon" src="https://yt3.googleusercontent.com/ytc/AIdro_mm8qtDjVSdLHXUA3UFvfAwph7NLfPQVFf4_cilOE3PIhE=s160-c-k-c0x00ffffff-no-rj" />
+              </a>
+            </li>
+            <li class="channel-item">
+              <h3>Jill Bearup</h3>
+              <a href="https://www.youtube.com/@JillBearup" rel="noopener noreferrer" target="_blank">
+                <img alt="Jill Bearup channel icon" class="channel-icon" src="https://yt3.googleusercontent.com/DxPJ9mI6xxgTG5FPPBsx9NoymkPNQF2nqHZ32olB-q74k7RqPlQv9lT82MQFEUgcUZE5AwKsfw=s160-c-k-c0x00ffffff-no-rj" />
+              </a>
+            </li>
+            <!-- Additional channels can go here -->
+          </ul>
+        </li>
+
+        <!-- Category: 800 – Literature -->
+        <li class="channel-item" id="literature">
+          <h1>800 – Literature</h1>
+          <p>Content related to literature will go here.</p>
+        </li>
+
+        <!-- Category: 900 – History And Geography -->
+        <li class="channel-item" id="history-geography">
+          <h1>900 – History And Geography</h1>
+          <p>Content related to history and geography will go here.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
