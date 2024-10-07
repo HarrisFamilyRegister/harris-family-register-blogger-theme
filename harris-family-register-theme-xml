@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='strm.xml' b:templateVersion='1.0.1' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <title><data:view.title.escaped/></title>
+    <b:include data='blog' name='all-head-content'/>
+
+ <b:skin><![CDATA[
+<!-- Variable definitions -->
+<Group description="Sharing">
+    <Variable name="sharing.background.color"
+        description="Sharing background color"
+        type="color"
+        default="$(posts.background.color)" value="#131314"/>
+    <Variable name="sharing.text.color" description="Sharing text color"
+        type="color"
+        default="$(posts.title.color)" value="#ececeb"/>
+    <Variable name="sharing.icons.color"
+        description="Sharing icons color"
+        type="color"
+        default="$(sharing.text.color)" value="#ececeb"/>
+</Group>
+
+<Group description="Post navigation" selector='div.blog-pager'>
+    <Variable name="posts.navigation.link.color"
+        description="Post navigation links color"
+        type="color"
+        default="$(body.link.color)" value="#ececeb"/> <!-- Updated -->
+    <Variable name="posts.navigation.link.visited.color"
+        description="Post navigation links visited color"
+        type="color"
+        default="$(body.link.visited.color)" value="#ececeb"/> <!-- Updated -->
+    <Variable name="posts.navigation.link.hover.color"
+        description="Post navigation links hover color"
+        type="color"
+        default="$(body.link.hover.color)" value="#ececeb"/> <!-- Updated -->
+</Group>
+
+<Variable name="posts.boxshadow.color" description="Post box shadow color" type="color" default="rgba(0, 0, 0, 0.2)" value="rgba(0, 0, 0, 0.298)"/>
+
+<!************************************************
+ * Blogger Template Style
+ * Name: Essential
+ **************************************************/
+/* Main Colors */
+:root {
+    --main-color: #ececeb; /* Light text color */
+    --background-color: #131314; /* Dark background */
+    --link-color: #ececeb; /* Link color */
+    --link-visited-color: #ececeb; /* Visited link color */
+    --link-hover-color: #ffffff; /* Hover color */
+}
+
+/* General Page Text and Body Layout */
+body {
+    font-family: 'IM Fell English', serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--main-color);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    background-color: var(--background-color);
+}
+
+/* Header Styles */
+.centered-top-container {
+    background: var(--background-color); /* Using root variable */
+    padding: 20px; /* Add padding for spacing */
+    position: relative; /* Relative position for layering */
+    z-index: 100; /* Ensure it is above other elements */
+}
+
+/* Blog Name Styles */
+.blog-name {
+    margin: 32px 0 16px; /* Margins for blog name */
+    color: var(--main-color); /* Use the main color for text */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex; /* Flexbox for navigation layout */
+    justify-content: space-between; /* Space the navigation links evenly */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping to new lines if necessary */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for the list */
+    flex-direction: column; /* Stack items vertically */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav li {
+    list-style-type: none; /* Remove bullets from list items */
+    margin: 5px 0; /* Add spacing between links */
+}
+
+nav a {
+    color: var(--link-color); /* Light text color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:visited {
+    color: var(--link-visited-color); /* Color for visited links */
+}
+
+nav a:hover {
+    color: var(--link-hover-color); /* Change color on hover */
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: bold; /* Ensure bold headings */
+    color: var(--main-color); /* Light text color */
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 16px;
+    color: var(--main-color); /* Light text color */
+}
+
+/* Bold and Italic Text */
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: var(--link-color); /* Light text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: var(--link-visited-color); /* Color for visited links */
+}
+
+a:hover {
+    color: var(--link-hover-color); /* Color on hover */
+}
+
+/* Blockquotes */
+blockquote {
+    color: var(--main-color); /* Light text color */
+    font-size: x-large; /* Size of the font */
+    text-align: center; /* Center alignment */
+}
+
+/* Pill Button */
+.pill-button {
+    font-size: 12px; /* Font size for pill button */
+}
+
+/* Page Body */
+.page_body {
+    position: relative; /* Positioning */
+    z-index: 20; /* Layering */
+}
+
+/* Widgets in Page Body */
+.page_body .widget {
+    margin-bottom: 16px; /* Spacing below each widget */
+}
+
+/* Centered Container */
+.page_body .centered {
+    box-sizing: border-box; /* Adjust box sizing */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column direction */
+    margin: 0 auto; /* Center the container */
+    max-width: 1000px; /* Maximum width for content */
+    min-height: 100vh; /* Full viewport height */
+    padding: 24px 0; /* Vertical padding */
+}
+
+/* Child Elements of Centered Container */
+.page_body .centered > * {
+    flex: 0 0 auto; /* Flex items won't grow or shrink */
+}
+
+/* Footer in Centered Container */
+.page_body .centered > .footer {
+    margin-top: auto; /* Push footer to the bottom */
+    text-align: center; /* Centered text */
+}
+
+/* Blog Archive Styles */
+.BlogArchive li {
+    font-size: 16px; /* Font size */
+    color: var(--main-color); /* Light text color */
+}
+
+.BlogArchive .post-count {
+    color: var(--main-color); /* Light text color */
+}
+
+/* Post Container and Featured Post Styles */
+#main .FeaturedPost,
+.Blog .blog-posts .post-outer-container {
+    background: var(--background-color); /* Dark background color */
+    min-height: 40px; /* Minimum height */
+    padding: 30px 40px; /* Padding */
+    width: auto; /* Automatic width */
+    box-shadow: 0 1px 4px 0 rgba(108, 107, 96, 0.298); /* Optional shadow */
+}
+
+.Blog .blog-posts .post-outer-container:last-child {
+    margin-bottom: 0; /* No margin below last item */
+}
+
+.Blog .blog-posts .post-outer-container .post-outer,
+.main .FeaturedPost .widget-content {
+    border: 0; /* No border */
+    position: relative; /* Relative positioning */
+    padding-bottom: .25em; /* Bottom padding */
+}
+
+.post-outer-container {
+    margin-bottom: 16px; /* Bottom margin */
+}
+
+.post:first-child {
+    margin-top: 0; /* No top margin for the first post */
+}
+
+.post .thumb {
+    float: left; /* Left float */
+    height: 20%; /* Height */
+    width: 20%; /* Width */
+}
+
+/* Post Title Styles */
+.post-title {
+    font: bold 22px 'IM Fell French Canon', serif; /* Font style and size */
+    float: left; /* Left float */
+    margin: 0 0 8px; /* Margins */
+    max-width: calc(100% - 48px); /* Maximum width */
+}
+
+.post-title a,
+.post-title,
+.post-title a:hover,
+.post-title a:visited {
+    color: var(--main-color); /* Light text color */
+}
+
+/* Post Body Styles */
+.post-body {
+    color: var(--main-color); /* Light text color */
+    font: normal normal 15px 'IM Fell French Canon', serif; /* Text font */
+    line-height: 1.6em; /* Line height */
+    margin: 1.5em 0 2em; /* Margin */
+    display: block; /* Block display */
+}
+
+.post-body img {
+    height: inherit; /* Inherit height */
+}
+
+.post-body .snippet-thumbnail {
+    float: left; /* Left float */
+    margin: 0; /* No margin */
+    margin-right: 2em; /* Right margin */
+    max-height: 128px; /* Maximum height */
+    max-width: 128px; /* Maximum width */
+}
+
+.post-body .snippet-thumbnail img {
+    max-width: 100%; /* Full width */
+}
+
+/* Featured Post Additional Styles */
+.FeaturedPost img {
+    margin-top: 2em; /* Top margin */
+}
+
+.FeaturedPost .snippet-container {
+    margin: 2em 0; /* Margin */
+}
+
+.FeaturedPost .snippet-container p {
+    margin: 0; /* No margin */
+}
+
+.FeaturedPost .snippet-thumbnail {
+    float: none; /* No float */
+    height: auto; /* Auto height */
+    margin-bottom: 2em; /* Bottom margin */
+    overflow: hidden; /* Hidden overflow */
+    max-height: calc(600px + 2em); /* Maximum height */
+    max-width: 100%; /* Full width */
+    text-align: center; /* Center alignment */
+    width: 100%; /* Full width */
+}
+
+/* Byline Styles */
+.byline {
+    color: var(--main-color); /* Light gray text */
+    display: inline-block; /* Inline block display */
+    line-height: 24px; /* Line height */
+    margin-top: 8px; /* Top margin */
+    vertical-align: top; /* Top alignment */
+}
+
+.byline.post-author:first-child {
+    margin-right: 0; /* No right margin for the first author */
+}
+
+.byline.reactions .reactions-label {
+    line-height: 22px; /* Line height for reactions label */
+    vertical-align: top; /* Top alignment */
+}
+
+.byline.post-share-buttons {
+    position: relative; /* Relative positioning */
+    display: inline-block; /* Inline block display */
+    margin-top: 0; /* No top margin */
+    width: 100%; /* Full width */
+}
+
+.byline.post-share-buttons .sharing {
+    float: right; /* Right float */
+}
+
+/* Post Share Buttons */
+.post-share-buttons-bottom,
+.post-share-buttons-top {
+    float: right; /* Right float */
+}
+
+.post-share-buttons-bottom {
+    margin-right: 24px; /* Right margin */
+}
+
+.post-share-buttons {
+    margin-left: 0; /* No left margin */
+}
+
+.post-share-buttons.invisible {
+    display: none; /* Hide if invisible */
+}
+
+.clear-sharing {
+    min-height: 24px; /* Minimum height */
+}
+
+/* Post Header/Footer Styles */
+.post-footer,
+.post-header {
+    clear: left; /* Clear left float */
+    color: var(--main-color); /* Light gray text */
+    margin: 0; /* No margin */
+    width: inherit; /* Inherit width */
+}
+
+/* Blog Pager */
+.blog-pager {
+    text-align: center; /* Center alignment */
+}
+
+.blog-pager a {
+    color: var(--main-color); /* Light text color */
+}
+
+.blog-pager a:visited {
+    color: var(--main-color); /* Light text color for visited links */
+}
+
+.blog-pager a:hover {
+    color: var(--link-hover-color); /* Lighter color on hover */
+}
+
+/* Timestamp Link Styles */
+a.timestamp-link,
+a:active.timestamp-link,
+a:visited.timestamp-link {
+    color: inherit; /* Inherit color */
+    font: inherit; /* Inherit font */
+    text-decoration: inherit; /* Inherit text decoration */
+}
+
+/* Comment Link Styles */
+.comment-link {
+    color: var(--main-color); /* Light text color */
+    position: relative; /* Relative positioning */
+}
+
+.comment-link .num_comments {
+    margin-left: 8px; /* Left margin */
+    vertical-align: top; /* Top alignment */
+}
+
+/* Comment Section */
+#comment-holder .continue {
+    display: none; /* Hide continue button */
+}
+
+#comment-editor {
+    margin: 20px 0; /* Margin */
+}
+
+#comments .comment-form h4,
+#comments h3.title {
+    position: absolute; /* Absolute positioning */
+    clip: rect(1px, 1px, 1px, 1px); /* Clip for accessibility */
+    padding: 0; /* No padding */
+    border: 0; /* No border */
+    height: 1px; /* Height */
+    width: 1px; /* Width */
+    overflow: hidden; /* Hidden overflow */
+}
+
+/* Post Filter Message */
+.post-filter-message {
+    background-color: rgba(0, 0, 0, .7); /* Dark background */
+    color: var(--main-color); /* Light text */
+    display: table; /* Table display */
+    margin-bottom: 16px; /* Bottom margin */
+    width: 100%; /* Full width */
+}
+
+.post-filter-message div {
+    display: table-cell; /* Table cell display */
+    padding: 15px 28px; /* Padding */
+}
+
+.post-filter-message div:last-child {
+    padding-left: 0; /* No left padding */
+    text-align: right; /* Right alignment */
+}
+
+.post-filter-message a {
+    white-space: nowrap; /* No wrapping */
+}
+
+.post-filter-message .search-label,
+.post-filter-message .search-query {
+    font-weight: 700; /* Bold font */
+    color: var(--main-color); /* Light text color */
+}
+
+/* Blog Pager Styles */
+#blog-pager {
+    margin: 2em 0; /* Margin */
+}
+
+/* Subscribe Button Styles */
+.subscribe-button {
+    border-color: var(--main-color); /* Light border color */
+    color: var(--main-color); /* Light text color */
+}
+
+.sticky .subscribe-button {
+    border-color: var(--main-color); /* Light border color */
+    color: var(--main-color); /* Light text color */
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    /* Styles for screens up to 800px wide */
+}
+
+/* Ensuring images do not exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* Headings */
+h3 {
+    color: var(--main-color); /* Light text color */
+    font-size: 16px;
+}
+
+/* Blockquotes */
+blockquote {
+    color: var(--main-color); /* Light text color */
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Pill Button */
+.pill-button {
+    font-size: 12px;
+}
+
+/* Page Body Styles */
+.page_body {
+    position: relative;
+    z-index: 20;
+}
+
+.page_body .widget {
+    margin-bottom: 16px;
+}
+
+.page_body .centered {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 100%; /* You may want to set an appropriate value */
+    min-height: 100vh;
+    padding: 24px 0;
+}
+
+/* Blog Name Styles */
+.blog-name {
+    margin: 32px 0 16px;
+    color: var(--main-color); /* Light text color */
+}
+
+.item-view .blog-name,
+.sticky .blog-name,
+.centered-top-container .blog-name {
+    box-sizing: border-box;
+    margin-left: 36px;
+    min-height: 48px;
+    padding-top: 12px;
+    opacity: 1;
+}
+
+.item-view .blog-name {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 48px 27px;
+}
+
+/* Page List Styles in Blog Name */
+.blog-name .PageList {
+    margin-top: 16px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.blog-name .PageList .overflowable-contents {
+    width: 100%;
+}
+
+.blog-name .PageList h3.title {
+    color: var(--main-color); /* Light text color */
+    margin: 8px auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* Return Link Styles */
+.item-view .return_link {
+    margin-bottom: 12px;
+    margin-top: 12px;
+    position: absolute;
+}
+
+/* Blog Archive Styles */
+.BlogArchive li {
+    font-size: 16px;
+    color: var(--main-color); /* Light text color */
+}
+
+.BlogArchive .post-count {
+    color: var(--main-color); /* Light text color */
+}
+]]></b:skin>
+
+    
+  <b:defaultmarkups>
+  <b:defaultmarkup type='Blog,FeaturedPost'>
+    <b:includable id='headerByline'>
+      <b:include cond='data:view.isMultipleItems or data:widgets.Blog.first.headerByline.items.share' data='{ shareButtonClass: &quot;post-share-buttons-top&quot;, overridden: true }' name='maybeAddShareButtons'/>
+      <b:include name='super.headerByline'/>
+    </b:includable>
+  </b:defaultmarkup>
+  
+  <b:defaultmarkup type='Blog,FeaturedPost'>
+    <b:includable id='commentsLink'>
+      <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+        <b:include data='{ iconClass: &quot;touch-icon&quot; }' name='commentIcon'/>
+        <span class='num_comments'>
+          <b:if cond='data:post.numberOfComments &gt; 0'>
+            <b:message name='messages.numberOfComments'>
+              <b:param expr:value='data:post.numberOfComments' name='numComments'/>
+            </b:message>
+          </b:if>
+        </span>
+      </a>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <b:defaultmarkup type='Blog'>
+    <b:includable id='main'>
+      <b:include name='noContentPlaceholder'/>
+      <b:include name='super.main'/>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <b:defaultmarkup type='FeaturedPost'>
+    <b:includable id='snippetedPostContent'>
+      <b:include cond='data:this.postDisplay.showTitle' name='snippetedPostTitle'/>
+      <b:include name='headerByline'/>
+      <b:include cond='data:this.postDisplay.showFeaturedImage and data:post.featuredImage' name='snippetedPostThumbnail'/>
+      <b:include cond='data:this.postDisplay.showSnippet' data='post' name='postSnippet'/>
+    </b:includable>
+  </b:defaultmarkup>
+  
+  <b:defaultmarkup type='Header'>
+    <b:includable id='title'>
+      <div>
+        <b:include name='super.title'/>
+      </div>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <b:defaultmarkup type='PopularPosts'>
+    <b:includable id='main'>
+      <b:with value='data:messages.popularPostsFromThisBlog' var='defaultTitle'>
+        <b:include name='super.main'/>
+      </b:with>
+    </b:includable>
+  </b:defaultmarkup>
+</b:defaultmarkups>
+
+  </head>
+
+ <body>
+    <b:class cond='data:view.isPreview' name='preview'/>
+    <b:class cond='data:view.isSingleItem' name='item-view'/>
+    <b:class cond='data:view.isArchive' name='archive-view'/>
+    <b:class cond='data:view.isLabelSearch' name='label-view'/>
+    <b:class cond='data:view.isSearch and !data:view.isLabelSearch' name='search-view'/>
+    <b:class cond='data:widgets none w =&gt; (w.sectionId in [&quot;sidebar_top&quot;, &quot;sidebar_bottom&quot;])' name='no-sidebar-widget'/>
+
+    <div class='page'>
+        <div class='bg-photo-overlay'></div>
+        <div class='bg-photo-container'>
+            <div class='bg-photo'></div>
+        </div>
+
+     
+
+            <main class='centered-bottom' id='main' role='main' tabindex='-1'>
+                <div class='main-content'>
+                    <!-- Main content area for posts -->
+                    <b:section class='main' id='content_section' name='Page Body' showaddelement='false'>
+                        <b:widget id='FeaturedPost1' locked='true' title='' type='FeaturedPost' version='2' visible='true'>
+                            <b:widget-settings>
+                                <b:widget-setting name='showSnippet'>true</b:widget-setting>
+                                <b:widget-setting name='showPostTitle'>true</b:widget-setting>
+                                <b:widget-setting name='showFirstImage'>true</b:widget-setting>
+                                <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
+                            </b:widget-settings>
+                            <b:includable id='widget_main' var='this'>
+                                <b:include name='widget-title'/>
+                                <div class='widget-content'>
+                                    <b:include name='snippetedPosts'/>
+                                </div>
+                            </b:includable>
+                        </b:widget>
+                    </b:section>
+                </div>
+            </main>
+        </div>
+                    </div>           
+            <b:includable id='blogThisShare'>
+  <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+            <b:includable id='bylineByName' var='byline'>
+  <b:switch var='data:byline.name'>
+  <b:case value='share'/>
+    <b:include cond='data:post.shareUrl' name='postShareButtons'/>
+  <b:case value='comments'/>
+    <b:include cond='data:post.allowComments' name='postCommentsLink'/>
+  <b:case value='location'/>
+    <b:include cond='data:post.location' name='postLocation'/>
+  <b:case value='timestamp'/>
+    <b:include cond='not data:view.isPage' name='postTimestamp'/>
+  <b:case value='author'/>
+    <b:include name='postAuthor'/>
+  <b:case value='labels'/>
+    <b:include cond='data:post.labels' name='postLabels'/>
+  <b:case value='icons'/>
+    <b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
+  </b:switch>
+</b:includable>
+            <b:includable id='bylineRegion' var='regionItems'>
+  <b:loop values='data:regionItems' var='byline'>
+    <b:include data='byline' name='bylineByName'/>
+  </b:loop>
+</b:includable>
+            <b:includable id='commentsLink'>
+          <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+            <b:include data='{ iconClass: &quot;touch-icon&quot; }' name='commentIcon'/>
+            <span class='num_comments'>
+              <b:if cond='data:post.numberOfComments &gt; 0'>
+                <b:message name='messages.numberOfComments'>
+                  <b:param expr:value='data:post.numberOfComments' name='numComments'/>
+                </b:message>
+              <b:else/>
+                <data:messages.postAComment/>
+              </b:if>
+            </span>
+          </a>
+        </b:includable>
+            <b:includable id='commentsLinkIframe'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+            <b:includable id='emailPostIcon'>
+  <span class='byline post-icons'>
+    <!-- email post links -->
+    <span class='item-action'>
+      <a expr:href='data:post.emailPostUrl' expr:title='data:messages.emailPost'>
+        <b:include data='{ iconClass: &quot;touch-icon sharing-icon&quot; }' name='emailIcon'/>
+      </a>
+    </span>
+  </span>
+</b:includable>
+            <b:includable id='facebookShare'>
+  <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+            <b:includable id='footerBylines'>
+  <b:if cond='data:widgets.Blog.first.footerBylines'>
+    <b:loop index='i' values='data:widgets.Blog.first.footerBylines' var='region'>
+      <b:if cond='not data:region.items.empty'>
+        <div expr:class='&quot;post-footer-line post-footer-line-&quot; + (data:i + 1)'>
+          <b:with value='&quot;footer-&quot; + (data:i + 1)' var='regionName'>
+            <b:include data='region.items' name='bylineRegion'/>
+          </b:with>
+        </div>
+      </b:if>
+    </b:loop>
+  </b:if>
+</b:includable>
+            <b:includable id='googlePlusShare'>
+</b:includable>
+            <b:includable id='headerByline'>
+          <b:include cond='data:view.isMultipleItems or data:widgets.Blog.first.headerByline.items.share' data='{ shareButtonClass: &quot;post-share-buttons-top&quot;, overridden: true }' name='maybeAddShareButtons'/>
+          <b:include name='super.headerByline'/>
+        </b:includable>
+            <b:includable id='linkShare'>
+  <b:with value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+            <b:includable id='otherSharingButton'>
+  <span class='sharing-platform-button sharing-element-other' expr:aria-label='data:messages.shareToOtherApps.escaped' expr:data-url='data:originalUrl' expr:title='data:messages.shareToOtherApps.escaped' role='menuitem' tabindex='-1'>
+    <b:with value='{key: &quot;sharingOther&quot;}' var='platform'>
+      <b:include name='sharingPlatformIcon'/>
+    </b:with>
+    <span class='platform-sharing-text'><data:messages.shareOtherApps.escaped/></span>
+  </span>
+</b:includable>
+            <b:includable id='platformShare'>
+  <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key' expr:data-url='data:originalUrl' expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:onclick='data:onclick ? data:onclick : &quot;&quot;' expr:title='data:platform.shareMessage' target='_blank'>
+    <span class='share-button-link-text'>
+      <data:platform.shareMessage/>
+    </span>
+  </a>
+</b:includable>
+            <b:includable id='postAuthor'>
+  <span class='byline post-author vcard'>
+    <span class='post-author-label'>
+      <data:byline.label/>
+    </span>
+    <span class='fn'>
+      <b:if cond='data:post.author.profileUrl'>
+        <meta expr:content='data:post.author.profileUrl'/>
+        <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+          <span><data:post.author.name/></span>
+        </a>
+      <b:else/>
+        <span><data:post.author.name/></span>
+      </b:if>
+    </span>
+  </span>
+</b:includable>
+            <b:includable id='postCommentsLink'>
+  <span class='byline post-comment-link container'>
+    <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
+  </span>
+</b:includable>
+            <b:includable id='postFooter' var='post'>
+          <div class='post-bottom'>
+            <div class='post-footer float-container'>
+              <b:include name='footerBylines'/>
+              <b:include cond='data:widget.type == &quot;Blog&quot;' data='post' name='postFooterAuthorProfile'/>
+            </div>
+            <b:if cond='data:view.isSingleItem'>
+                <b:include data='{ shareButtonClass: &quot;post-share-buttons-bottom invisible&quot;, overridden: true }' name='maybeAddShareButtons'/>
+            <b:else/>
+              <b:include data='post' name='postFooterJumpLink'/>
+            </b:if>
+          </div>
+        </b:includable>
+            <b:includable id='postFooterJumpLink'>
+          <b:comment>Ripple, and show &#39;keep reading&#39; as the default.</b:comment>
+          <div class='jump-link flat-button ripple'>
+            <a expr:href='data:post.hasJumpLink ? data:post.url fragment &quot;more&quot; : data:post.url' expr:title='data:post.title'>
+              <data:blog.jumpLinkMessage/>
+            </a>
+          </div>
+        </b:includable>
+            <b:includable id='postJumpLink'>
+          <b:comment>Overridden, and migrated to postFooter. Called as postFooterJumpLink.</b:comment>
+        </b:includable>
+            <b:includable id='postLabels'>
+          <b:comment>We don&#39;t display labels on the home page.</b:comment>
+          <b:if cond='data:view.isSingleItem and data:widget.type == &quot;Blog&quot;'>
+            <b:include name='super.postLabels'/>
+          </b:if>
+        </b:includable>
+            <b:includable id='postLocation'>
+  <span class='byline post-location'>
+    <data:byline.label/>
+    <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
+  </span>
+</b:includable>
+            <b:includable id='postReactions'>
+  <!-- Reaction feature no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+            <b:includable id='postShareButtons' var='post'>
+          <b:comment>We call super.postShareButtons from the migrated positions.</b:comment>
+        </b:includable>
+            <b:includable id='postTimestamp'>
+  <span class='byline post-timestamp'>
+    <data:byline.label/>
+    <b:if cond='data:post.url'>
+      <meta expr:content='data:post.url.canonical'/>
+      <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+        <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
+          <data:post.date/>
+        </time>
+      </a>
+    </b:if>
+  </span>
+</b:includable>
+            <b:includable id='sharingButton'>
+  <span expr:aria-label='data:platform.shareMessage' expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key' expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage' role='menuitem' tabindex='-1'>
+    <b:include name='sharingPlatformIcon'/>
+    <span class='platform-sharing-text'><data:platform.name/></span>
+  </span>
+</b:includable>
+            <b:includable id='sharingButtonContent'>
+  <div class='flat-icon-button ripple'>
+    <b:include name='shareIcon'/>
+  </div>
+</b:includable>
+            <b:includable id='sharingButtons'>
+  <div class='sharing' expr:aria-owns='&quot;sharing-popup-&quot; + data:sharingId' expr:data-title='data:shareTitle'>
+    <button class='sharing-button touch-icon-button' expr:aria-controls='&quot;sharing-popup-&quot; + data:sharingId' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-button-&quot; + data:sharingId' role='button'>
+      <b:include name='sharingButtonContent'/>
+    </button>
+    <b:include name='sharingButtonsMenu'/>
+  </div>
+</b:includable>
+            <b:includable id='sharingButtonsMenu'>
+  <div class='share-buttons-container'>
+    <ul aria-hidden='true' class='share-buttons hidden' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-popup-&quot; + data:sharingId' role='menu'>
+      <b:loop values='(data:platforms ?: data:blog.sharing.platforms) filter (p =&gt; p.key not in {&quot;blogThis&quot;})' var='platform'>
+        <li>
+          <b:include name='sharingButton'/>
+        </li>
+      </b:loop>
+      <li aria-hidden='true' class='hidden'>
+        <b:include name='otherSharingButton'/>
+      </li>
+    </ul>
+  </div>
+</b:includable>
+            <b:includable id='sharingPlatformIcon'>
+  <b:include data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }' expr:name='data:platform.key + &quot;Icon&quot;'/>
+</b:includable>
+            <b:includable id='snippetedPostByline'>
+          <b:include name='headerByline'/>
+        </b:includable>
+            <b:includable id='snippetedPostContent'>
+          <b:comment>Re-order the thumbnail before the snippet, add &#39;Keep reading&#39; link.</b:comment>
+          <b:include cond='data:this.postDisplay.showTitle' name='snippetedPostTitle'/>
+          <b:include name='headerByline'/>
+          <b:include cond='data:this.postDisplay.showFeaturedImage and data:post.featuredImage' data='post' name='snippetedPostThumbnail'/>
+          <b:include cond='data:this.postDisplay.showSnippet' data='post' name='postSnippet'/>
+          <b:include data='post' name='postFooter'/>
+        </b:includable>
+            <b:includable id='snippetedPostThumbnail'>
+          <div class='snippet-thumbnail'>
+            <b:with value='data:post.featuredImage.isYoutube                            ? resizeImage(data:post.featuredImage.youtubeMaxResDefaultUrl, 945, &quot;945:600&quot;)                            : &quot;&quot;' var='highRes'>
+              <b:include data='{                                  image: data:post.featuredImage,                                  imageSizes: [256, 512, 945, 1684],                                  imageRatio: &quot;945:600&quot;,                                  sourceSizes: &quot;(min-width: 954px) 842px, (min-width: 801px) calc(100vw - 112px), calc(100vw - 64px)&quot;,                                  enhancedSourceset: data:highRes                                }' name='responsiveImage'/>
+            </b:with>
+          </div>
+        </b:includable>
+            <b:includable id='snippetedPostTitle'>
+  <b:if cond='data:post.title != &quot;&quot;'>
+    <h3 class='post-title'><a expr:href='data:post.url'><data:post.title/></a></h3>
+  </b:if>
+</b:includable>
+            <b:includable id='snippetedPosts'>
+  <div role='feed'>
+    <!-- Don't render the post that we're currently already looking at. -->
+    <b:loop values='data:posts filter (p =&gt; p.id != data:view.postId)' var='post'>
+      <article class='post' role='article'>
+        <b:include name='snippetedPostContent'/>
+      </article>
+    </b:loop>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
+    </div>
+    <footer class='footer'>
+        <!-- Footer content can go here -->
+        <p>&#169; 2024 Your Blog Name</p>
+    </footer>
+</main>
+            <div>
+      </div>
+    </div>
+  </body>         
+</html>
