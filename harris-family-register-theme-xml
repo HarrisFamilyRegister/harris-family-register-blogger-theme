@@ -5,9 +5,32 @@
   <b:if cond='!data:view.isLayoutMode'>
     <link href='https://fonts.googleapis.com/css2?family=IM+Fell+English&amp;display=swap' rel='stylesheet'/>
   </b:if>
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <!-- Improved viewport settings -->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0' name='viewport'/>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+    <meta content='true' name='HandheldFriendly'/>
+    <meta content='width' name='MobileOptimized'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
     <title><data:view.title.escaped/></title>
     <b:include data='blog' name='all-head-content'/>
+
+    <!-- Favicon -->
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkq8htUkgH2Loos5Atn61IZhRM7fpmkrPtNepKFlIPiA7R2kiLYRdj5blEcZ4EgUk1oBb_6HyaWmVKE-PVUrtpaYzpoOyL3IZz4b4DQ29X5iYnlHRevE4Wo-q_S-vlqsT9nHhGJrIbNcrSd8YjUc7T6jgLkylh1msnN7hQdY7pkWD33VRIpG0XniZDTOU/s1600/16%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='16x16' type='image/png'/>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaAaHxl_6DK1u7O3SqmJkqZ20yUYMNSK0088NLoMbefg4zPuZ7hRL3JKNeeQtlZ0g4_tuqRqLswFI9MrGLnH8Kr7StBTH30rv6bXPgwQwdc8tQwI6UG_CwmcsbNGXbo4PQByuoFqUBxdEPvGXEdD7dmyVrL-DnyHwXlZk8fblqntVoJa5SJwga0TH8/s1600/32%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='32x32' type='image/png'/>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzQhjqiVGH1g5U9W5URxcLsbf3oRI6Ea6UmRYQAjyco7B4TS_boyMHT3So1MUsbgso4pZpkVk-H8qCUWCalE0BjSpzjceXZHmIQk0x0oI9nQG7f8rP47Gf6XbttR5-oSrRe-rFKRDtGBqkfs2tBA_2zdRUSwZufLfsSAa1KmByihD7U6VU_zuSzzyAWHk/s1600/48%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='48x48' type='image/png'/>
+
+    <!-- Apple Touch Icon -->
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyoTZTpbzWDta7VzywPK4sEZiN3Twp_UqgDMYP5-OUjMLIdwwEG62f2IUnr2rAOLzSlV_Q5lfAOqCEvRBjOfm2HTf75w24UcbVsXConxwULsRnzwz9kVQhWu-Agro3RjCaF0tdyQWGZAlSnDWqGyA17t1rElIS8oaZJFmniHlLXGeIr7Z2C1hB6Ae6JUI/s1600/192%20Png%20Harris%20Family%20Logo.png' rel='apple-touch-icon' sizes='180x180'/>
+
+    <!-- Android Chrome M39+ with site installed to the homescreen -->
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyoTZTpbzWDta7VzywPK4sEZiN3Twp_UqgDMYP5-OUjMLIdwwEG62f2IUnr2rAOLzSlV_Q5lfAOqCEvRBjOfm2HTf75w24UcbVsXConxwULsRnzwz9kVQhWu-Agro3RjCaF0tdyQWGZAlSnDWqGyA17t1rElIS8oaZJFmniHlLXGeIr7Z2C1hB6Ae6JUI/s1600/192%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='192x192' type='image/png'/>
+
+    <!-- For PWA -->
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwz4mDSIl9skWS_jvQcwGzpfAWbwTL8wdKeb9kFgLy76QoQkEiR1lSiaUOt4nDeiuJag9J0pjUfzqYjRV-8-0XBgFTqNcs4794ZxID7niMdRfz3N8v29QWR2MQ8-f3JlCfNjdp9y7aPPoop6B92rlzEZPsu-lz3kEurrkWdwmDNMHZTFPItsURSJXbcmg/s320/512%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='512x512' type='image/png'/>
+
+    <!-- Microsoft Tile for Windows 8.1 and up -->
+    <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyoTZTpbzWDta7VzywPK4sEZiN3Twp_UqgDMYP5-OUjMLIdwwEG62f2IUnr2rAOLzSlV_Q5lfAOqCEvRBjOfm2HTf75w24UcbVsXConxwULsRnzwz9kVQhWu-Agro3RjCaF0tdyQWGZAlSnDWqGyA17t1rElIS8oaZJFmniHlLXGeIr7Z2C1hB6Ae6JUI/s1600/192%20Png%20Harris%20Family%20Logo.png' name='msapplication-TileImage'/>
+    <meta content='#ffffff' name='msapplication-TileColor'/>
   
 <b:skin><![CDATA[
 /* Your existing variable definitions and global styles remain unchanged */
@@ -30,7 +53,6 @@
     --border-width: 2px;
     --sidebar-width: 250px;
 }
-
 /* Global Styles */
 body {
     font-family: var(--font-primary);
@@ -40,18 +62,15 @@ body {
     color: var(--color-text-main);
     line-height: 1.6em;
 }
-
 /* Link Styles */
 a {
     color: var(--color-link);
     text-decoration: none;
 }
-
 a:hover {
     color: var(--color-link-hover);
     text-decoration: none;
 }
-
 .header {
     width: 100%;
     max-width: var(--max-width-wrapper);
@@ -60,7 +79,6 @@ a:hover {
     margin: 0 auto;
     margin-bottom: 20px; /* Reduce this value to move the header closer to the body */
 }
-
 .header-container {
     background: linear-gradient(to bottom, #0e0e0e, #131314);
     padding: 15px; /* Reduce padding if needed */
@@ -70,13 +88,29 @@ a:hover {
     border-radius: 8px;
     opacity: 0.95;
 }
-
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 0 auto 15px; /* Adjusted margin */
+}
+.header-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.header-logo:hover {
+    transform: scale(1.05);
+}
 .nav-menu {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .nav-list {
     list-style: none;
     padding: 0;
@@ -84,29 +118,27 @@ a:hover {
     display: flex;
     gap: 20px;
 }
-
 .nav-list li {
     margin: 0;
 }
-
 .nav-button {
     background-color: #ECECEB;
     color: #131314;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased padding for larger button size */
     border-radius: 30px;
     border: none;
     font-family: 'IM Fell English', serif;
-    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
+    font-size: 17px; /* Slight increase from default size */
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s, transform 0.3s ease; /* Added transform transition */
     cursor: pointer;
 }
-
 .nav-button:hover {
     background-color: var(--color-link-hover);
     color: #ECECEB;
     text-shadow: 0 0 8px #ffffff;
+    transform: scale(1.05); /* Slight increase in size on hover */
 }
-
 /* Main Content Styles */
 .main-container {
     display: flex;
@@ -114,6 +146,7 @@ a:hover {
     margin: 10px auto;
     max-width: var(--max-width-wrapper);
     width: var(--main-container-max-width);
+    padding-bottom: 100px; /* Increased from 20px to 100px */
 }
 .content-wrapper {
     display: flex;
@@ -144,7 +177,13 @@ a:hover {
     position: sticky;
     top: 40px;
     padding: 20px;
-    background-color: #1c1c1e;
+    background: linear-gradient(
+        135deg, 
+        #1c1c1e,  /* Main background color */
+        #232324 15%,  /* Slightly lighter shade */
+        #202023 30%,  /* Lighter color for subtle gradient effect */
+        #1c1c1e 70%  /* Returning to the main color */
+    );
     border-radius: 8px;
     color: #ececeb;
     height: fit-content;
@@ -152,14 +191,15 @@ a:hover {
     flex-shrink: 0;
     margin-left: calc(-1 * var(--sidebar-width) - var(--padding-general) + 110px);
     margin-right: var(--padding-general);
-    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+    transition: box-shadow 0.3s ease, font-size 0.3s ease; /* Added font-size transition */
     box-shadow: 0 0 0 rgba(236, 236, 235, 0); /* Initial state with no glow */
 }
 .sidebar h2 {
-    font-size: 24px;
+    font-size: 26px; /* Slight increase from 24px */
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
+    transition: font-size 0.3s ease; /* Smooth font-size transition */
 }
 
 .sidebar ul {
@@ -173,18 +213,23 @@ a:hover {
 }
 
 .sidebar a {
+    font-size: 17px; /* Slight increase from default 16px */
     color: #ececeb;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s, text-shadow 0.3s;
+    transition: color 0.3s, text-shadow 0.3s, font-size 0.3s ease; /* Smooth font-size transition */
 }
+
 .sidebar:hover {
     box-shadow: 0 0 15px rgba(236, 236, 235, 0.5); /* Glow effect on hover */
 }
+
 .sidebar a:hover {
     color: #ffffff;
     text-shadow: 0 0 5px #ececeb;
+    font-size: 18px; /* Slight increase on hover */
 }
+
 /* Grid Layout */
 .grid-container {
     width: 100%;
@@ -197,9 +242,10 @@ a:hover {
     padding: 0;
     width: 100%;
     box-sizing: border-box;
+    opacity: 0.94; /* Subtle opacity */
 }
 .grid-item {
-    background-color: #1c1c1e;
+    background-color: #1c1c1d; /* 6% lighter than #131314 */
     padding: 20px;
     text-align: center;
     border-radius: 8px;
@@ -207,8 +253,8 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Optional: slight scale on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Optional: shadow on hover */
 }
 .grid-item-icon {
     width: 100px;
@@ -218,14 +264,21 @@ a:hover {
     margin-bottom: 10px;
 }
 .grid-item.category-header {
-    grid-column: 1 / -1; /* Make category headers span full width */
-    background-color: #2c2c2e; /* Different background for category headers */
-    margin-top: 20px; /* Add some space above each category */
+    grid-column: 1 / -1;
+    background: repeating-linear-gradient(
+        135deg, 
+        #131314, 
+        #2a2a2b 40%, /* Lighter color transition spread over 40% */
+        #131314 80%  /* Darker color extends to 80% */
+    );
+    margin-top: 20px;
+    opacity: 0.9;
 }
 .grid-item.category-header h1 {
     margin: 0;
     padding: 15px;
     font-size: 24px;
+    color: #ffffff; /* White text for contrast */
 }
 /* Blog Post Styles */
 .post-outer-container {
@@ -385,6 +438,82 @@ a:hover {
 .page-title {
   display: none;
 }
+/* Footer Styles */
+.footer-container {
+    width: 100%;
+    background: linear-gradient(to top, #0e0e0f, #131314); /* 10% darker at the bottom transitioning to #131314 */
+    color: #ECECEB; /* Light text for contrast */
+    padding: 30px 0;
+    margin-top: 20px;
+}
+#socket {
+    width: 100%;
+    max-width: var(--max-width-wrapper);
+    margin: 0 auto;
+    padding: 0 var(--padding-general);
+}
+.footer-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+.footer-column {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-links a {
+    color: #ECECEB;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ececeb;
+}
+.copyright {
+    font-size: 0.9em;
+    text-align: right;
+    margin-bottom: 15px;
+}
+.copyright a {
+    color: #ECECEB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.copyright a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ececeb;
+}
+#back-to-top {
+    background-color: #ECECEB;
+    color: #131314;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 60px;
+    border: none;
+    font-family: 'IM Fell English', serif;
+    font-size: 28px;
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+}
+#back-to-top:hover {
+    background-color: var(--color-link-hover);
+    color: #ECECEB;
+    text-shadow: 0 0 16px #ffffff;
+}
 /* Responsive Styling */
 @media (max-width: 1200px) {
     .main-container {
@@ -402,9 +531,13 @@ a:hover {
     }
     .main-content {
         width: 100%;
+        margin-left: 0;
     }
     .grid-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .footer-content {
+        gap: 30px;
     }
 @media (max-width: 992px) {
     .header {
@@ -420,6 +553,13 @@ a:hover {
     }
     .grid-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .footer-content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-column {
+        flex-basis: calc(50% - 20px);
     }
 @media (max-width: 768px) {
     .main-container {
@@ -437,6 +577,33 @@ a:hover {
     .grid-item-icon {
         width: 90px;
         height: 90px;
+    }
+    .footer-container {
+        padding: 15px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        flex-basis: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links {
+        align-items: center;
+    }
+    .copyright {
+        text-align: center;
+    }
+    #back-to-top {
+        padding: 15px 30px;
+        font-size: 20px;
+        border-radius: 45px;
+    }
+    .logo-container {
+        width: 180px;
+        height: 180px;
     }
 @media (max-width: 576px) {
     .header-container {
@@ -466,6 +633,12 @@ a:hover {
         width: 80px;
         height: 80px;
     }
+    .footer-container .title {
+        font-size: 1rem;
+    }
+    .footer-links a {
+        font-size: 0.8em;
+    }
 @media (max-width: 480px) {
     .main-container {
         width: 100%;
@@ -477,26 +650,32 @@ a:hover {
     .grid-item h3 {
         font-size: 16px;
     }
-/* Footer Styles */
-.footer-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    background-color: var(--color-background);
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-}
-.footer {
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    text-align: center;
-}
+    #back-to-top-fixed {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        bottom: 10px;
+        right: 10px;
+    }
+    #back-to-top {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .logo-container {
+        width: 150px;
+        height: 150px;
+    }
 ]]></b:skin>
 </head>
 
 <body>
 <div class='header-container'>
   <header class='header'>
+    <div class='logo-container'>
+      <a href='#' id='random-page-link'>
+        <img alt='Harris Family Logo' class='header-logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwz4mDSIl9skWS_jvQcwGzpfAWbwTL8wdKeb9kFgLy76QoQkEiR1lSiaUOt4nDeiuJag9J0pjUfzqYjRV-8-0XBgFTqNcs4794ZxID7niMdRfz3N8v29QWR2MQ8-f3JlCfNjdp9y7aPPoop6B92rlzEZPsu-lz3kEurrkWdwmDNMHZTFPItsURSJXbcmg/s320/512%20Png%20Harris%20Family%20Logo.png' srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwz4mDSIl9skWS_jvQcwGzpfAWbwTL8wdKeb9kFgLy76QoQkEiR1lSiaUOt4nDeiuJag9J0pjUfzqYjRV-8-0XBgFTqNcs4794ZxID7niMdRfz3N8v29QWR2MQ8-f3JlCfNjdp9y7aPPoop6B92rlzEZPsu-lz3kEurrkWdwmDNMHZTFPItsURSJXbcmg/s320/512%20Png%20Harris%20Family%20Logo.png 2x'>
+        </img>
+          </a>
+    </div>
     <nav class='nav-menu'>
       <ul class='nav-list'>
         <li><a class='nav-button' href='https://harrisfamilyregister.blogspot.com/p/news.html'>News</a></li>
@@ -528,13 +707,13 @@ a:hover {
           </ul>
         <b:elseif cond='data:view.pageId == &quot;7998491345952519445&quot;'/> <!-- News page -->
           <ul>
+            <li><a href='#news-aggregators'>News Aggregators</a></li>
             <li><a href='#right-news'>Right News</a></li>
-            <li><a href='#left-news'>Left News</a></li>
-            <li><a href='#left-news'>Left News</a></li>
-            <li><a href='#technology-news'>Technology News</a></li>
-            <li><a href='#science-news'>Science News</a></li>
-            <li><a href='#world-news'>World News</a></li>
+            <li><a href='#center-news'>Center News</a></li>
+            <li><a href='#left-news'>Left News</a></li>          
+           <li><a href='#world-news'>World News</a></li>
             <li><a href='#business-news'>Business News</a></li>
+            <li><a href='#science-news'>Science News</a></li>
           </ul>
         <b:elseif cond='data:view.pageId == &quot;4061486233526607147&quot;'/> <!-- AI Tools page -->
           <ul>
@@ -582,47 +761,97 @@ a:hover {
           <b:if cond='data:view.pageId == &quot;7326251779722951260&quot;'>
             <!-- YouTube Channel Page Content -->
             <ul class='grid-list'>
-            <!-- Category: 000 &#8211; Computer Science, Information And General Works -->
-            <li class='grid-item' id='computer-science'>
-              <h1>000 &#8211; Computer Science, Information And General Works</h1>
-              <p>Content related to computer science, information technology, and general knowledge will go here.</p>
-            </li>
+           <!-- Category: 000 &#8211; Computer Science, Information And General Works -->
+<li class='grid-item category-header' id='computer-science'>
+  <h1>000 &#8211; Computer Science, Information And General Works</h1>
+</li>
 
-            <!-- Category: 100 &#8211; Philosophy And Psychology -->
-            <li class='grid-item' id='philosophy-and-psychology'>
-              <h1>100 &#8211; Philosophy And Psychology</h1>
-              <p>Content related to philosophy and psychology will go here.</p>
-            </li>
+<li class='grid-item'>
+  <h3>Lex Fridman</h3>
+  <a href='https://www.youtube.com/@lexfridman' rel='noopener noreferrer' target='_blank'>
+    <img alt='Lex Fridman channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kSzDQxM_5VTZP_kapf1jJfzlHHJeECbFM9cx_dQ8guTAl-=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+   <!-- Category: 100 &#8211; Philosophy And Psychology -->
+<li class='grid-item category-header' id='philosophy-and-psychology'>
+  <h1>100 &#8211; Philosophy And Psychology</h1>
+</li>
 
-            <!-- Category: 200 &#8211; Religion -->
-            <li class='grid-item' id='religion'>
-              <h1>200 &#8211; Religion</h1>
-              <p>Content related to religion will go here.</p>
-            </li>
+<li class='grid-item'>
+  <h3>Jordan B Peterson</h3>
+  <a href='https://www.youtube.com/@JordanBPeterson' rel='noopener noreferrer' target='_blank'>
+    <img alt='Jordan B Peterson channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/Ko0UXEQL6PLt4CE_nQkI8aL6llY_GtWu-rQoZ3tgh1Gsmy7qKOrvazU4nBQOZ3kl0TZ3bivz4wM=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+   <!-- Category: 200 &#8211; Religion -->
+<li class='grid-item category-header' id='religion'>
+  <h1>200 &#8211; Religion</h1>
+</li>
 
-            <!-- Category: 300 &#8211; Social Sciences -->
-            <li class='grid-item' id='social-sciences'>
-              <h1>300 &#8211; Social Sciences</h1>
-              <p>Content related to social sciences will go here.</p>
-            </li>
+<li class='grid-item'>
+  <h3>Alyssa Grenfell</h3>
+  <a href='https://www.youtube.com/@alyssadgrenfell' rel='noopener noreferrer' target='_blank'>
+    <img alt='Alyssa Grenfell channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ZnkKDXgM3C0SDrziw6TPMJam1coNBk-X4kfVN750oMzqvdC5NsbJkOZCzQ-4EHo8eqVSs9wLQdA=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+           <!-- Category: 300 &#8211; Social Sciences -->
+<li class='grid-item category-header' id='social-sciences'>
+  <h1>300 &#8211; Social Sciences</h1>
+</li>
 
-            <!-- Category: 400 &#8211; Language -->
-            <li class='grid-item' id='language'>
-              <h1>400 &#8211; Language</h1>
-              <p>Content related to language studies will go here.</p>
-            </li>
+<li class='grid-item'>
+  <h3>EconTalk</h3>
+  <a href='https://www.youtube.com/@econtalkwithruss' rel='noopener noreferrer' target='_blank'>
+    <img alt='EconTalk channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kh461JJLWhX37AF0F0vRT0k6jtH2J5-iDvI0KTAzyLJWM=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
 
-            <!-- Category: 500 &#8211; Pure Science -->
-            <li class='grid-item' id='pure-science'>
-              <h1>500 &#8211; Pure Science</h1>
-              <p>Content related to pure science will go here.</p>
-            </li>
+<li class='grid-item'>
+  <h3>Ryan Chapman</h3>
+  <a href='https://www.youtube.com/@realryanchapman' rel='noopener noreferrer' target='_blank'>
+    <img alt='Ryan Chapman channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/BbbTk2ibeXpjZTWYt0X9iuamVCnGmZh0v_CKTLQ0e96tEp4NuHA8IwxGjKpfe_oJNQwadBUHMQ=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
 
-            <!-- Category: 600 &#8211; Technology -->
-            <li class='grid-item' id='technology'>
-              <h1>600 &#8211; Technology</h1>
-              <p>Content related to technology will go here.</p>
-            </li>
+<li class='grid-item'>
+  <h3>Hillsdale College</h3>
+  <a href='https://www.youtube.com/@hillsdalecollege' rel='noopener noreferrer' target='_blank'>
+    <img alt='Hillsdale College channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_lpp-Ni60E7m2k1JOi_8DgZBO8I4po1hXIa8fQFzsIkv6o=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+           <!-- Category: 400 &#8211; Language -->
+<li class='grid-item category-header' id='language'>
+  <h1>400 &#8211; Language</h1>
+</li>
+<li class='grid-item'>
+  <h3>Words Unravelled</h3>
+  <a href='https://www.youtube.com/@WordsUnravelled' rel='noopener noreferrer' target='_blank'>
+    <img alt='Words Unravelled channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/JgfKVRjFB0r5wp1XBnijsS41j0Zpvpta0XkWDJDeRWZAGwSCx2xa5Tdxt51QJEbNHJVh1SrB=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+           <!-- Category: 500 &#8211; Pure Science -->
+<li class='grid-item category-header' id='pure-science'>
+  <h1>500 &#8211; Pure Science</h1>
+</li>
+
+<li class='grid-item'>
+  <h3>TierZoo</h3>
+  <a href='https://www.youtube.com/@TierZoo' rel='noopener noreferrer' target='_blank'>
+    <img alt='TierZoo channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nEZmwHLHj4M9KtLtmgcIOM68qlMv8OhDOGUpNT1uHMfA=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+         <!-- Category: 600 &#8211; Technology -->
+<li class='grid-item category-header' id='technology'>
+  <h1>600 &#8211; Technology</h1>
+</li>
+
+<li class='grid-item'>
+  <h3>Medlife Crisis</h3>
+  <a href='https://www.youtube.com/@MedlifeCrisis' rel='noopener noreferrer' target='_blank'>
+    <img alt='Medlife Crisis channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kw3jRVl9M9F6rAvCJIrb_oyT32vau8A8bYlg60UcVC7Ik=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+
 
          <!-- Category: 700 &#8211; Arts And Recreation -->
 <li class='grid-item category-header' id='arts-recreation'>
@@ -661,38 +890,87 @@ a:hover {
                   </a>
                 </li>
                 <!-- Additional channels can go here -->
-              </ul>
-          
+              </ul>        
+ <!-- Category: 800 &#8211; Literature -->
+    <li class='grid-item category-header' id='literature'>
+      <h1>800 &#8211; Literature</h1>
+    </li>
+    <li class='grid-item'>
+      <h3>Terrible Writing Advice</h3>
+      <a href='https://www.youtube.com/@TerribleWritingAdvice' rel='noopener noreferrer' target='_blank'>
+        <img alt='Terrible Writing Advice channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nxn9SW7ujlaTJmRrOpGYtQ2vdB3C7PzR6OEdbC6k_FO-Y=s160-c-k-c0x00ffffff-no-rj'/>
+      </a>
+    </li>
+<!-- Category: 900 &#8211; History And Geography -->
+<li class='grid-item category-header' id='history-geography'>
+  <h1>900 &#8211; History And Geography</h1>
+</li>
+<li class='grid-item'>
+  <h3>Lindybeige</h3>
+  <a href='https://www.youtube.com/@lindybeige' rel='noopener noreferrer' target='_blank'>
+    <img alt='Lindybeige channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_ktqdB4GaDpve8NF276KedcgYPa_uSOPHohXKY7C9lnK74=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+</li>
+<li class='grid-item'>
+  <h3>Fall of Civilizations</h3>
+  <a href='https://www.youtube.com/@FallofCivilizations' rel='noopener noreferrer' target='_blank'>
+    <img alt='Fall of Civilizations Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_k3dNbc-PV4Gj_I6bSZ6tvmha1C36aFFbQFuLBEaMgP_Q=s160-c-k-c0x00ffffff-no-rj'/>
+  </a>
+  <p>A YouTube channel exploring the history of ancient civilizations and their collapse, providing in-depth narratives and visuals.</p>
+</li>
 
-            <!-- Category: 800 &#8211; Literature -->
-            <li class='grid-item' id='literature'>
-              <h1>800 &#8211; Literature</h1>
-              <p>Content related to literature will go here.</p>
-            </li>
-
-            <!-- Category: 900 &#8211; History And Geography -->
-            <li class='grid-item' id='history-geography'>
-              <h1>900 &#8211; History And Geography</h1>
-              <p>Content related to history and geography will go here.</p>
-            </li>
 <b:include data='post' name='post'/>
 <b:elseif cond='data:view.pageId == &quot;7998491345952519445&quot;'/>
   <!-- News Page Content -->
   <ul class='grid-list'>
+     <li class='grid-item category-header' id='news-aggregators'>
+      <h1>News Aggregators</h1>
+    </li>
+    <li class='grid-item'>
+  <h3>GroundNews</h3>
+  <a href='https://ground.news/' rel='noopener noreferrer' target='_blank'>
+    <img alt='GroundNews Logo' src='https://pbs.twimg.com/profile_images/1687493764602789888/mfQQInqp_400x400.jpg' style='width:100px; height:auto;'/>
+  </a>
+  <p>A platform that aggregates news from various sources, allowing users to compare coverage across the political spectrum.</p>
+</li>
+    <li class='grid-item'>
+  <h3>RealClearPolitics</h3>
+  <a href='https://www.realclearpolitics.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='RealClearPolitics Logo' src='https://assets.realclear.com/images/44/446100_5_.jpg' style='width:100px; height:auto;'/>
+  </a>
+  <p>A news aggregation site known for political news, polling data, and opinion pieces across the political spectrum.</p>
+</li>
+    <li class='grid-item'>
+  <h3>AllSides</h3>
+  <a href='https://www.allsides.com/unbiased-balanced-news' rel='noopener noreferrer' target='_blank'>
+    <img alt='AllSides Logo' src='https://play-lh.googleusercontent.com/6TaJOx27vgTBwl7mes4UemC71g5mSpwhVLM9oqM_ltIgL4hI5I0RYhObEgJF-kzTlg' style='width:100px; height:auto;'/>
+  </a>
+  <p>A platform that provides balanced news by showing articles from the left, center, and right perspectives.</p>
+</li>
     <li class='grid-item category-header' id='right-news'>
       <h1>Right News</h1>
     </li>
+ <li class='grid-item'>
+  <h3>New York Post</h3>
+  <a href='https://nypost.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='New York Post Logo' src='https://pbs.twimg.com/profile_images/2908311645/8940da4061a1eacd2ac105bc21b664b8_400x400.jpeg' style='width:100px; height:auto;'/>
+  </a>
+  <p>A popular American newspaper providing breaking news, sports, business, entertainment, and more.</p>
+</li>
     <li class='grid-item'>
-      <h3>Drudge Report</h3>
-      <p>A news aggregation website known for its conservative-leaning content and breaking news stories.</p>
-      <a href='https://www.drudgereport.com/' rel='noopener noreferrer' target='_blank'>Visit Drudge Report</a>
-    </li>
+  <h3>Quillette</h3>
+  <a href='https://quillette.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='Quillette Logo' src='https://cdn.quillette.com/2022/12/Instagram-tiles-219.jpg' style='width:100px; height:auto;'/>
+  </a>
+  <p>An online magazine focusing on science, technology, and politics from a center-right perspective.</p>
+</li>
     <li class='grid-item'>
-      <h3>Quillette</h3>
-      <p>An online magazine focusing on science, technology, and politics from a center-right perspective.</p>
-      <a href='https://quillette.com/' rel='noopener noreferrer' target='_blank'>Read Quillette</a>
-    </li>
-
+  <h3>Antiwar</h3>
+  <a href='https://antiwar.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='Antiwar Logo' src='https://dgxhtav2e25a8.cloudfront.net/antiwar_logo.gif' style='width:100px; height:auto;'/>
+  </a>
+  <p>A libertarian, non-interventionist site focusing on opposition to U.S. military involvement and imperialism.</p>
+</li>
     <li class='grid-item category-header' id='center-news'>
       <h1>Center News</h1>
     </li>
@@ -702,6 +980,40 @@ a:hover {
     <img alt='Wall Street Journal Logo' class='grid-item-icon' src='https://mlt.org/wp-content/uploads/2017/04/WSJ-Logo.jpg'/>
   </a>
   <p>A respected business-focused newspaper known for its in-depth reporting and analysis.</p>
+</li>
+     <li class='grid-item category-header' id='left-news'>
+      <h1>Left News</h1>
+    </li>
+ <li class='grid-item'>
+  <h3>New York Times</h3>
+  <a href='https://www.nytimes.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='New York Times Logo' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWMJnz4pGzmUHyey5kOJh7l0YJSG-bbKYv6g&amp;s' style='width:100px; height:auto;'/>
+  </a>
+  <p>A major American newspaper providing news, analysis, and opinion on national and international issues.</p>
+</li>
+ <li class='grid-item'>
+  <h3>Drudge Report</h3>
+  <a href='https://www.drudgereport.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='Drudge Report Logo' src='https://play-lh.googleusercontent.com/7gQ8rfBButkYKsI9x55zLnFf64_xsjOutFL0shuRZyaWzfp3jjilruw3BxN8WfW5lGI' style='width:100px; height:auto;'/>
+  </a>
+  <p>A news aggregation website known for its conservative-leaning content and breaking news stories.</p>
+</li>
+    <li class='grid-item'>
+  <h3>The Nation</h3>
+  <a href='https://www.thenation.com/' rel='noopener noreferrer' target='_blank'>
+    <img alt='The Nation Logo' src='https://api.athleticsnyc.site/wp-content/uploads/2023/07/thumbnail02-768x864.jpg' style='width:100px; height:auto;'/>
+  </a>
+  <p>A leading progressive magazine covering politics, social justice, and current affairs from a left-wing perspective.</p>
+</li>
+      <li class='grid-item category-header' id='world-news'>
+      <h1>World News</h1>
+    </li>
+    <li class='grid-item'>
+  <h3>The Straits Times</h3>
+  <a href='https://www.straitstimes.com/global' rel='noopener noreferrer' target='_blank'>
+    <img alt='The Straits Times Logo' src='https://m.media-amazon.com/images/I/41Y-MUPJU7L.png' style='width:100px; height:auto;'/>
+  </a>
+  <p>A leading news source from Singapore, covering global and regional news with a focus on Asia and international affairs.</p>
 </li>
     <!-- Add more news items as needed -->
   </ul>
@@ -1422,15 +1734,172 @@ a:hover {
   </b:widget>
 </b:section>
    
-
-<div class='footer-container'>
-    <footer class='footer'>
-        <!-- Footer content goes here -->
-    </footer>
+      </b:if>
 </div>
-    </b:if>
   </div>
   </div>
+
+<footer class='footer-container'>
+  <div id='socket'>
+    <div class='container'>
+      <div class='footer-content'>
+       <div class='footer-column'>
+  <h3>Quick Links</h3>
+  <div class='footer-links'>
+    <a href='/'>Blog</a>
+     <a href='https://sites.google.com/view/harrisfamilyrecommends/comedy' rel='noopener noreferrer' target='_blank'>Google Site</a>
+    <a href='https://forms.gle/hwUJJP69eRqcciRw6' rel='noopener noreferrer' target='_blank'>Suggestion Box</a>
+    <a href='/About'>About</a>
   </div>
-</body>
+        </div>
+        <div class='footer-column'>
+          <h3>Wiki Resources</h3>
+          <div class='footer-links'>
+            <a href='https://commons.wikimedia.org' rel='noopener noreferrer' target='_blank'>Wikimedia Commons</a>
+            <a href='https://www.wikiversity.org' rel='noopener noreferrer' target='_blank'>Wikiversity</a>
+            <a href='https://www.wiktionary.org' rel='noopener noreferrer' target='_blank'>Wiktionary</a>
+            <a href='https://www.wikibooks.org' rel='noopener noreferrer' target='_blank'>WikiBooks</a>
+            <a href='https://www.wikipedia.org' rel='noopener noreferrer' target='_blank'>Wikipedia</a>
+          </div>
+        </div>
+        <div class='footer-column'>
+          <div class='copyright'>
+            &#169; <script>document.write(new Date().getFullYear())</script> Wandering Wikis. 
+            Licensed under the <a href='https://opensource.org/licenses/MIT' rel='noopener noreferrer' target='_blank'>MIT License</a>.
+          </div>
+          <div class='back-to-top'>
+            <button id='back-to-top'>Back to Top</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class='btn btn-outline-light' id='back-to-top-fixed'>Back to Top</button>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<script type='application/ld+json'>
+{
+  &quot;@context&quot;: &quot;http://schema.org&quot;,
+  &quot;@type&quot;: &quot;BlogPosting&quot;,
+  &quot;mainEntityOfPage&quot;: {
+    &quot;@type&quot;: &quot;WebPage&quot;,
+    &quot;@id&quot;: &quot;<data:blog.canonicalUrl/>&quot;
+  },
+  &quot;headline&quot;: &quot;<data:blog.pageName/>&quot;,
+  &quot;description&quot;: &quot;<b:if cond='data:blog.metaDescription'><data:blog.metaDescription/><b:else><data:blog.pageName/></b:else></b:if>&quot;,
+  &quot;datePublished&quot;: &quot;<data:post.date/>&quot;,
+  &quot;dateModified&quot;: &quot;<data:post.lastUpdated/>&quot;,
+  &quot;image&quot;: {
+    &quot;@type&quot;: &quot;ImageObject&quot;,
+    &quot;url&quot;: &quot;<b:if cond='data:post.firstImageUrl'><data:post.firstImageUrl/><b:else>https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeOSI/AAAAAAAAC-w/Ny43uReLVQUc5GaQZYeyZqhFNGqm-HpJgCLcBGAsYHQ/w1200-h630-p-k-no-nu/default.png</b:else></b:if>&quot;,
+    &quot;height&quot;: 630,
+    &quot;width&quot;: 1200
+  },
+  &quot;author&quot;: {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;name&quot;: &quot;<data:post.author.name/>&quot;
+  },
+  &quot;publisher&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Wandering Wikis&quot;,
+    &quot;logo&quot;: {
+      &quot;@type&quot;: &quot;ImageObject&quot;,
+      &quot;url&quot;: &quot;https://1.bp.blogspot.com/-50s1RMWLA7s/X8OaYjJcMiI/AAAAAAAASUQ/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png&quot;,
+      &quot;width&quot;: 297,
+      &quot;height&quot;: 65
+    }
+  }
+}
+</script>
+</b:if>
+<script type='text/javascript'>
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+  var backToTopButton = document.getElementById('back-to-top-fixed');
+  var backToTopFooterButton = document.getElementById('back-to-top');
+  
+  function scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  backToTopButton.addEventListener('click', scrollToTop);
+  backToTopFooterButton.addEventListener('click', scrollToTop);
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 100) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+});
+//]]>
+</script>
+ <script type='text/javascript'>
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+  var cyclePageLink = document.getElementById('random-page-link');
+  var navButtons = document.querySelectorAll('.nav-button');
+  var currentIndex = 0;
+
+  cyclePageLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Get the next page in the cycle
+    var nextPage = navButtons[currentIndex].href;
+    
+    // Update the index for the next click
+    currentIndex = (currentIndex + 1) % navButtons.length;
+    
+    // Navigate to the next page
+    window.location.href = nextPage;
+  });
+
+  // Set the initial index based on the current page
+  var currentPath = window.location.pathname;
+  for (var i = 0; i < navButtons.length; i++) {
+    if (navButtons[i].pathname === currentPath) {
+      currentIndex = (i + 1) % navButtons.length;
+      break;
+    }
+  }
+});
+//]]>
+</script>
+     <script type='text/javascript'>
+    //<![CDATA[
+        const rssUrl = 'https://www.skysports.com/chelsea/rss'; // Sky Sports Chelsea RSS Feed URL
+
+        // Function to fetch and parse RSS feed
+        async function fetchRSSFeed(url) {
+            try {
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`);
+                const data = await response.json();
+
+                if (data.status === 'ok') {
+                    displayRSSFeed(data.items);
+                }
+            } catch (error) {
+                console.error('Error fetching the RSS feed:', error);
+            }
+        }
+
+        // Function to display the feed items
+        function displayRSSFeed(items) {
+            const feedContainer = document.getElementById('rss-feed');
+            items.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
+                feedContainer.appendChild(listItem);
+            });
+        }
+
+        // Call the fetch function when the page loads
+        fetchRSSFeed(rssUrl);
+    //]]>
+    </script>
+  </body>
 </html>
