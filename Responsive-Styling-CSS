@@ -1,0 +1,223 @@
+/* Responsive Styling */
+/* Large Screens (1701px and above) */
+@media (min-width: 1701px) {
+    /* Default styles for large screens */
+}
+/* Extra Large Devices (1700px to 1667px) */
+@media (max-width: 1700px) and (min-width: 1668px) {
+    .sidebar {
+        width: calc(250px + (100vw - 1700px) * 0.1);
+        margin-right: calc(20px + (100vw - 1700px) * 0.02);
+    }   
+    .main-content {
+        width: calc(100% - 270px - (100vw - 1700px) * 0.12);
+    }
+/* Large Devices (1667px to 1237px) */
+@media (max-width: 1667px) and (min-width: 1237px) {
+    .sidebar {
+        margin-left: auto;
+        margin-right: 20px;
+        width: 230px;
+    } 
+    .main-content {
+        width: calc(100% - 250px);
+    }
+/* Medium Large Devices (1236px to 1101px) */
+@media (max-width: 1236px) and (min-width: 1101px) {
+    .content-wrapper {
+        position: relative;
+    }
+    .sidebar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+    }
+    .main-content {
+        width: calc(100% - 220px);
+        margin-right: 220px;
+    }
+/* Medium Devices (1100px to 993px) */
+@media (max-width: 1100px) and (min-width: 993px) {
+    .main-container {
+        width: 95%;
+    }
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        top: 0;
+        right: auto;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: none;
+        order: -1;
+    }
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .grid-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .footer-content {
+        gap: 30px;
+    }
+/* Small Devices (992px to 769px) */
+@media (max-width: 992px) and (min-width: 769px) {
+    .main-container {
+        display: grid; /* Use a grid for more flexibility */
+        grid-template-columns: 1fr 350px; /* Main content takes 1fr, sidebar fixed to 350px */
+        gap: 20px; /* Add space between main content and sidebar */
+        margin: 10px auto;
+        max-width: var(--max-width-wrapper);
+        padding-bottom: 50px;
+    }
+    .main-content {
+        grid-column: 1 / 2; /* Main content stays in the first column */
+        padding: 20px;
+        background-color: var(--color-background);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for experimental feel */
+    }
+    .sidebar {
+        grid-column: 2 / 3; /* Sidebar stays in the second column */
+        padding: 20px;
+        background: linear-gradient(135deg, #1c1c1e, #232324);
+        border-radius: 16px; /* More rounded corners for experimental design */
+        box-shadow: 0 4px 8px rgba(236, 236, 235, 0.3);
+        transform: translateY(-20px); /* Add some visual effect with sidebar slightly elevated */
+    }
+    .nav-list {
+        flex-direction: row;
+        justify-content: space-around; /* Spread the nav items */
+        padding: 10px;
+    }
+    .nav-button {
+        padding: 10px 20px;
+        border-radius: 25px;
+        background-color: #ececeb;
+        color: #131314;
+        transition: transform 0.3s ease;
+    }
+    .nav-button:hover {
+        transform: scale(1.05);
+    }
+/* Extra Small Devices (768px to 577px) */
+@media (max-width: 768px) and (min-width: 577px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 90%; /* Reduced width to create a more centered layout */
+        padding: 0 10px;
+    }
+    .main-content {
+        order: 2; /* Move main content below sidebar */
+        padding: 15px;
+        border-radius: 10px;
+        background-color: var(--color-background);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow intensity */
+    }
+    .sidebar {
+        order: 1; /* Sidebar comes first */
+        padding: 20px;
+        background: linear-gradient(135deg, #202023, #1c1c1e);
+        border-radius: 12px;
+        transform: rotate(1deg); /* Slight tilt for a more experimental touch */
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-button {
+        width: 80%; /* Wider buttons */
+        margin-bottom: 10px;
+    }
+/* Mobile Devices (576px to 481px) */
+@media (max-width: 576px) and (min-width: 481px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        width: 100%;
+        padding: 0 10px;
+        gap: 20px;
+    }
+    .main-content {
+        order: 2; /* Keep content below sidebar */
+        padding: 10px;
+        background-color: var(--color-background);
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(236, 236, 235, 0.1); /* Larger shadow for an elevated look */
+    }
+    .sidebar {
+        order: 1; /* Sidebar appears first */
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(145deg, #232324, #131314);
+        border-radius: 16px;
+        transform: translateY(-10px) rotate(-1deg); /* Slight rotation */
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 15px; /* Add space between nav items */
+        align-items: center;
+    }
+    .nav-button {
+        width: 100%;
+        padding: 15px;
+        border-radius: 35px; /* Very rounded buttons */
+        background-color: #ececeb;
+        color: #131314;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .nav-button:hover {
+        background-color: #ffffff;
+        color: #131314;
+        text-shadow: 0px 1px 5px #ececeb;
+    }
+/* Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .main-content {
+        padding: 15px;
+        background-color: var(--color-background);
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(236, 236, 235, 0.1);
+        order: 2; /* Main content below */
+    }
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #131314, #202023);
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(236, 236, 235, 0.2);
+        transform: rotate(2deg); /* Tilt for a more dynamic look */
+        order: 1; /* Sidebar appears first */
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav-button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 30px;
+        background-color: #ececeb;
+        color: #131314;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .nav-button:hover {
+        transform: scale(1.1);
+        background-color: #ffffff;
+    }
