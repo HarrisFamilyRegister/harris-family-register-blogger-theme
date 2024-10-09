@@ -528,25 +528,19 @@ a:hover {
     text-shadow: 0 0 16px #ffffff;
 }
 /* Responsive Styling */
-/* Responsive Styling */
-
 /* Large Screens (1701px and above) */
 @media (min-width: 1701px) {
     /* Default styles for large screens */
 }
-
 /* Extra Large Devices (1700px to 1667px) */
 @media (max-width: 1700px) and (min-width: 1668px) {
     .sidebar {
         width: calc(250px + (100vw - 1700px) * 0.1);
         margin-right: calc(20px + (100vw - 1700px) * 0.02);
-    }
-    
+    }   
     .main-content {
         width: calc(100% - 270px - (100vw - 1700px) * 0.12);
     }
-}
-
 /* Large Devices (1667px to 1237px) */
 @media (max-width: 1667px) and (min-width: 1237px) {
     .sidebar {
@@ -558,8 +552,6 @@ a:hover {
     .main-content {
         width: calc(100% - 250px);
     }
-}
-
 /* Medium Large Devices (1236px to 1101px) */
 @media (max-width: 1236px) and (min-width: 1101px) {
     .content-wrapper {
@@ -575,8 +567,6 @@ a:hover {
         width: calc(100% - 220px);
         margin-right: 220px;
     }
-}
-
 /* Medium Devices (1100px to 993px) */
 @media (max-width: 1100px) and (min-width: 993px) {
     .main-container {
@@ -605,8 +595,6 @@ a:hover {
     .footer-content {
         gap: 30px;
     }
-}
-
 /* Small Devices (992px to 769px) */
 @media (max-width: 992px) and (min-width: 769px) {
     .header {
@@ -630,8 +618,6 @@ a:hover {
     .footer-column {
         flex-basis: calc(50% - 20px);
     }
-}
-
 /* Extra Small Devices (768px to 577px) */
 @media (max-width: 768px) and (min-width: 577px) {
     .main-container {
@@ -677,8 +663,6 @@ a:hover {
         width: 180px;
         height: 180px;
     }
-}
-
 /* Mobile Devices (576px to 481px) */
 @media (max-width: 576px) and (min-width: 481px) {
     .header-container {
@@ -714,8 +698,6 @@ a:hover {
     .footer-links a {
         font-size: 0.8em;
     }
-}
-
 /* Small Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .main-container {
@@ -841,58 +823,58 @@ a:hover {
 <li class='grid-item category-header' id='computer-science'>
   <h1>000 &#8211; Computer Science, Information And General Works</h1>
 </li>
-
 <li class='grid-item'>
-  <h3>Lex Fridman</h3>
-  <a href='https://www.youtube.com/@lexfridman' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@lexfridman' rel='noopener noreferrer' target='_blank'>
+    <h3>Lex Fridman</h3>
     <img alt='Lex Fridman channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kSzDQxM_5VTZP_kapf1jJfzlHHJeECbFM9cx_dQ8guTAl-=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore deep conversations on science, technology, and philosophy with Lex Fridman.</p>
   </a>
 </li>
    <!-- Category: 100 &#8211; Philosophy And Psychology -->
 <li class='grid-item category-header' id='philosophy-and-psychology'>
   <h1>100 &#8211; Philosophy And Psychology</h1>
 </li>
-
 <li class='grid-item'>
-  <h3>Jordan B Peterson</h3>
-  <a href='https://www.youtube.com/@JordanBPeterson' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@JordanBPeterson' rel='noopener noreferrer' target='_blank'>
+    <h3>Jordan B. Peterson</h3>
     <img alt='Jordan B Peterson channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/Ko0UXEQL6PLt4CE_nQkI8aL6llY_GtWu-rQoZ3tgh1Gsmy7qKOrvazU4nBQOZ3kl0TZ3bivz4wM=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Delve into psychology, philosophy, and self-help insights with Jordan B. Peterson.</p>
   </a>
 </li>
    <!-- Category: 200 &#8211; Religion -->
 <li class='grid-item category-header' id='religion'>
   <h1>200 &#8211; Religion</h1>
 </li>
-
 <li class='grid-item'>
-  <h3>Alyssa Grenfell</h3>
-  <a href='https://www.youtube.com/@alyssadgrenfell' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@alyssadgrenfell' rel='noopener noreferrer' target='_blank'>
+    <h3>Alyssa Grenfell</h3>
     <img alt='Alyssa Grenfell channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ZnkKDXgM3C0SDrziw6TPMJam1coNBk-X4kfVN750oMzqvdC5NsbJkOZCzQ-4EHo8eqVSs9wLQdA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Join Alyssa Grenfell for insights on personal development and wellness.</p>
   </a>
 </li>
            <!-- Category: 300 &#8211; Social Sciences -->
 <li class='grid-item category-header' id='social-sciences'>
   <h1>300 &#8211; Social Sciences</h1>
 </li>
-
 <li class='grid-item'>
-  <h3>EconTalk</h3>
-  <a href='https://www.youtube.com/@econtalkwithruss' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@econtalkwithruss' rel='noopener noreferrer' target='_blank'>
+    <h3>EconTalk</h3>
     <img alt='EconTalk channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kh461JJLWhX37AF0F0vRT0k6jtH2J5-iDvI0KTAzyLJWM=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore economic concepts and discussions with Russ Roberts on EconTalk.</p>
   </a>
 </li>
-
 <li class='grid-item'>
-  <h3>Ryan Chapman</h3>
-  <a href='https://www.youtube.com/@realryanchapman' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@realryanchapman' rel='noopener noreferrer' target='_blank'>
+    <h3>Ryan Chapman</h3>
     <img alt='Ryan Chapman channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/BbbTk2ibeXpjZTWYt0X9iuamVCnGmZh0v_CKTLQ0e96tEp4NuHA8IwxGjKpfe_oJNQwadBUHMQ=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover insightful discussions and content with Ryan Chapman.</p>
   </a>
 </li>
-
 <li class='grid-item'>
-  <h3>Hillsdale College</h3>
-  <a href='https://www.youtube.com/@hillsdalecollege' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@hillsdalecollege' rel='noopener noreferrer' target='_blank'>
+    <h3>Hillsdale College</h3>
     <img alt='Hillsdale College channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_lpp-Ni60E7m2k1JOi_8DgZBO8I4po1hXIa8fQFzsIkv6o=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Engage with lectures and discussions on classical education from Hillsdale College.</p>
   </a>
 </li>
            <!-- Category: 400 &#8211; Language -->
@@ -900,31 +882,32 @@ a:hover {
   <h1>400 &#8211; Language</h1>
 </li>
 <li class='grid-item'>
-  <h3>Words Unravelled</h3>
-  <a href='https://www.youtube.com/@WordsUnravelled' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@WordsUnravelled' rel='noopener noreferrer' target='_blank'>
+    <h3>Words Unravelled</h3>
     <img alt='Words Unravelled channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/JgfKVRjFB0r5wp1XBnijsS41j0Zpvpta0XkWDJDeRWZAGwSCx2xa5Tdxt51QJEbNHJVh1SrB=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore the intricacies of language and storytelling with Words Unravelled.</p>
   </a>
 </li>
            <!-- Category: 500 &#8211; Pure Science -->
 <li class='grid-item category-header' id='pure-science'>
   <h1>500 &#8211; Pure Science</h1>
 </li>
-
 <li class='grid-item'>
-  <h3>TierZoo</h3>
-  <a href='https://www.youtube.com/@TierZoo' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@TierZoo' rel='noopener noreferrer' target='_blank'>
+    <h3>TierZoo</h3>
     <img alt='TierZoo channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nEZmwHLHj4M9KtLtmgcIOM68qlMv8OhDOGUpNT1uHMfA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Delve into the world of animal ecology and gaming with TierZoo.</p>
   </a>
 </li>
          <!-- Category: 600 &#8211; Technology -->
 <li class='grid-item category-header' id='technology'>
   <h1>600 &#8211; Technology</h1>
 </li>
-
 <li class='grid-item'>
-  <h3>Medlife Crisis</h3>
-  <a href='https://www.youtube.com/@MedlifeCrisis' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@MedlifeCrisis' rel='noopener noreferrer' target='_blank'>
+    <h3>Medlife Crisis</h3>
     <img alt='Medlife Crisis channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kw3jRVl9M9F6rAvCJIrb_oyT32vau8A8bYlg60UcVC7Ik=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Join Medlife Crisis for engaging discussions on health, wellness, and medical topics.</p>
   </a>
 </li>
          <!-- Category: 700 &#8211; Arts And Recreation -->
@@ -932,62 +915,69 @@ a:hover {
   <h1>700 &#8211; Arts And Recreation</h1>
 </li>
 <li class='grid-item'>
-  <h3>Karolina Żebrowska</h3>
-  <a href='https://www.youtube.com/c/Karolina%C5%BCebrowskax' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/c/Karolina%C5%BCebrowskax' rel='noopener noreferrer' target='_blank'>
+    <h3>Karolina Żebrowska</h3>
     <img alt='Karolina Żebrowska channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nY1T7cH_lxcwDP5pKW3pLWhtfo2BmY2Rwk-BgpXfXoZQU=s176-c-k-c0x00ffffff-no-rj-mo'/>
+    <p>Discover historical fashion and culture insights with Karolina Żebrowska.</p>
+  </a>
+</li>
+
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@PerspectiveArts' rel='noopener noreferrer' target='_blank'>
+    <h3>Perspective</h3>
+    <img alt='Perspective channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_k_2fVL3faKBMWaDOoKlnBsKJPTvS0KPhadaIhtjpQWVg=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore art and creativity with a focus on diverse perspectives.</p>
+  </a>
+</li>
+             <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@theartassignment' rel='noopener noreferrer' target='_blank'>
+    <h3>The Art Assignment</h3>
+    <img alt='The Art Assignment channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_l0VVOo2oH5LYz7KXtQNzjk2T0Uz_ls3j2BNUL9OXIXNzk=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore the world of art and creativity with engaging assignments and discussions.</p>
   </a>
 </li>
 <li class='grid-item'>
-  <h3>Perspective</h3>
-  <a href='https://www.youtube.com/@PerspectiveArts' rel='noopener noreferrer' target='_blank'>
-    <img alt='Perspective channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_k_2fVL3faKBMWaDOoKlnBsKJPTvS0KPhadaIhtjpQWVg=s160-c-k-c0x00ffffff-no-rj'/>
+  <a class='full-link' href='https://www.youtube.com/@justineleconte' rel='noopener noreferrer' target='_blank'>
+    <h3>Justine Leconte</h3>
+    <img alt='Justine Leconte channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_mm8qtDjVSdLHXUA3UFvfAwph7NLfPQVFf4_cilOE3PIhE=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover fashion tips and insights with Justine Leconte.</p>
   </a>
 </li>
-                <li class='grid-item'>
-                  <h3>The Art Assignment</h3>
-                  <a href='https://www.youtube.com/@theartassignment' rel='noopener noreferrer' target='_blank'>
-                    <img alt='The Art Assignment channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_l0VVOo2oH5LYz7KXtQNzjk2T0Uz_ls3j2BNUL9OXIXNzk=s160-c-k-c0x00ffffff-no-rj'/>
-                  </a>
-                </li>
-                <li class='grid-item'>
-                  <h3>Justine Leconte</h3>
-                  <a href='https://www.youtube.com/@justineleconte' rel='noopener noreferrer' target='_blank'>
-                    <img alt='Justine Leconte channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_mm8qtDjVSdLHXUA3UFvfAwph7NLfPQVFf4_cilOE3PIhE=s160-c-k-c0x00ffffff-no-rj'/>
-                  </a>
-                </li>
-                <li class='grid-item'>
-                  <h3>Jill Bearup</h3>
-                  <a href='https://www.youtube.com/@JillBearup' rel='noopener noreferrer' target='_blank'>
-                    <img alt='Jill Bearup channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/DxPJ9mI6xxgTG5FPPBsx9NoymkPNQF2nqHZ32olB-q74k7RqPlQv9lT82MQFEUgcUZE5AwKsfw=s160-c-k-c0x00ffffff-no-rj'/>
-                  </a>
-                </li>
-                      
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@JillBearup' rel='noopener noreferrer' target='_blank'>
+    <h3>Jill Bearup</h3>
+    <img alt='Jill Bearup channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/DxPJ9mI6xxgTG5FPPBsx9NoymkPNQF2nqHZ32olB-q74k7RqPlQv9lT82MQFEUgcUZE5AwKsfw=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Join Jill Bearup for engaging discussions on costumes, history, and more.</p>
+  </a>
+</li>                   
  <!-- Category: 800 &#8211; Literature -->
     <li class='grid-item category-header' id='literature'>
       <h1>800 &#8211; Literature</h1>
     </li>
     <li class='grid-item'>
-      <h3>Terrible Writing Advice</h3>
-      <a href='https://www.youtube.com/@TerribleWritingAdvice' rel='noopener noreferrer' target='_blank'>
-        <img alt='Terrible Writing Advice channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nxn9SW7ujlaTJmRrOpGYtQ2vdB3C7PzR6OEdbC6k_FO-Y=s160-c-k-c0x00ffffff-no-rj'/>
-      </a>
-    </li>
+  <a class='full-link' href='https://www.youtube.com/@TerribleWritingAdvice' rel='noopener noreferrer' target='_blank'>
+    <h3>Terrible Writing Advice</h3>
+    <img alt='Terrible Writing Advice channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nxn9SW7ujlaTJmRrOpGYtQ2vdB3C7PzR6OEdbC6k_FO-Y=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Get humorous and insightful tips on writing and storytelling with Terrible Writing Advice.</p>
+  </a>
+</li>
 <!-- Category: 900 &#8211; History And Geography -->
 <li class='grid-item category-header' id='history-geography'>
   <h1>900 &#8211; History And Geography</h1>
 </li>
 <li class='grid-item'>
-  <h3>Lindybeige</h3>
-  <a href='https://www.youtube.com/@lindybeige' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@lindybeige' rel='noopener noreferrer' target='_blank'>
+    <h3>Lindybeige</h3>
     <img alt='Lindybeige channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_ktqdB4GaDpve8NF276KedcgYPa_uSOPHohXKY7C9lnK74=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Join Lindybeige for engaging discussions on history, warfare, and culture.</p>
   </a>
 </li>
 <li class='grid-item'>
-  <h3>Fall of Civilizations</h3>
-  <a href='https://www.youtube.com/@FallofCivilizations' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://www.youtube.com/@FallofCivilizations' rel='noopener noreferrer' target='_blank'>
+    <h3>Fall of Civilizations</h3>
     <img alt='Fall of Civilizations Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_k3dNbc-PV4Gj_I6bSZ6tvmha1C36aFFbQFuLBEaMgP_Q=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>A YouTube channel exploring the history of ancient civilizations and their collapse, providing in-depth narratives and visuals.</p>
   </a>
-  <p>A YouTube channel exploring the history of ancient civilizations and their collapse, providing in-depth narratives and visuals</p>
 </li>
  <!-- Additional channels can go here -->
               </ul> 
@@ -998,94 +988,94 @@ a:hover {
      <li class='grid-item category-header' id='news-aggregators'>
       <h1>News Aggregators</h1>
     </li>
-    <li class='grid-item'>
-  <h3>GroundNews</h3>
-  <a href='https://ground.news/' rel='noopener noreferrer' target='_blank'>
+  <li class='grid-item'>
+  <a class='full-link' href='https://ground.news/' rel='noopener noreferrer' target='_blank'>
+    <h3>GroundNews</h3>
     <img alt='GroundNews Logo' src='https://pbs.twimg.com/profile_images/1687493764602789888/mfQQInqp_400x400.jpg' style='width:100px; height:auto;'/>
+    <p>A platform that aggregates news from various sources, allowing users to compare coverage across the political spectrum.</p>
   </a>
-  <p>A platform that aggregates news from various sources, allowing users to compare coverage across the political spectrum.</p>
 </li>
-    <li class='grid-item'>
-  <h3>RealClearPolitics</h3>
-  <a href='https://www.realclearpolitics.com/' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.realclearpolitics.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>RealClearPolitics</h3>
     <img alt='RealClearPolitics Logo' src='https://assets.realclear.com/images/44/446100_5_.jpg' style='width:100px; height:auto;'/>
+    <p>A news aggregation site known for political news, polling data, and opinion pieces across the political spectrum.</p>
   </a>
-  <p>A news aggregation site known for political news, polling data, and opinion pieces across the political spectrum.</p>
 </li>
-    <li class='grid-item'>
-  <h3>AllSides</h3>
-  <a href='https://www.allsides.com/unbiased-balanced-news' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.allsides.com/unbiased-balanced-news' rel='noopener noreferrer' target='_blank'>
+    <h3>AllSides</h3>
     <img alt='AllSides Logo' src='https://play-lh.googleusercontent.com/6TaJOx27vgTBwl7mes4UemC71g5mSpwhVLM9oqM_ltIgL4hI5I0RYhObEgJF-kzTlg' style='width:100px; height:auto;'/>
+    <p>A platform that provides balanced news by showing articles from the left, center, and right perspectives.</p>
   </a>
-  <p>A platform that provides balanced news by showing articles from the left, center, and right perspectives.</p>
 </li>
     <li class='grid-item category-header' id='right-news'>
       <h1>Right News</h1>
     </li>
  <li class='grid-item'>
-  <h3>New York Post</h3>
-  <a href='https://nypost.com/' rel='noopener noreferrer' target='_blank'>
+  <a class='full-link' href='https://nypost.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>New York Post</h3>
     <img alt='New York Post Logo' src='https://pbs.twimg.com/profile_images/2908311645/8940da4061a1eacd2ac105bc21b664b8_400x400.jpeg' style='width:100px; height:auto;'/>
+    <p>A popular American newspaper providing breaking news, sports, business, entertainment, and more.</p>
   </a>
-  <p>A popular American newspaper providing breaking news, sports, business, entertainment, and more.</p>
 </li>
-    <li class='grid-item'>
-  <h3>Quillette</h3>
-  <a href='https://quillette.com/' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://quillette.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Quillette</h3>
     <img alt='Quillette Logo' src='https://cdn.quillette.com/2022/12/Instagram-tiles-219.jpg' style='width:100px; height:auto;'/>
+    <p>An online magazine focusing on science, technology, and politics from a center-right perspective.</p>
   </a>
-  <p>An online magazine focusing on science, technology, and politics from a center-right perspective.</p>
 </li>
-    <li class='grid-item'>
-  <h3>Antiwar</h3>
-  <a href='https://antiwar.com/' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://antiwar.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Antiwar</h3>
     <img alt='Antiwar Logo' src='https://dgxhtav2e25a8.cloudfront.net/antiwar_logo.gif' style='width:100px; height:auto;'/>
+    <p>A libertarian, non-interventionist site focusing on opposition to U.S. military involvement and imperialism.</p>
   </a>
-  <p>A libertarian, non-interventionist site focusing on opposition to U.S. military involvement and imperialism.</p>
 </li>
     <li class='grid-item category-header' id='center-news'>
       <h1>Center News</h1>
     </li>
-   <li class='grid-item'>
-  <h3>Wall Street Journal</h3>
-  <a href='https://www.wsj.com/' rel='noopener noreferrer' target='_blank'>
+  <li class='grid-item'>
+  <a class='full-link' href='https://www.wsj.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Wall Street Journal</h3>
     <img alt='Wall Street Journal Logo' class='grid-item-icon' src='https://mlt.org/wp-content/uploads/2017/04/WSJ-Logo.jpg'/>
+    <p>A respected business-focused newspaper known for its in-depth reporting and analysis.</p>
   </a>
-  <p>A respected business-focused newspaper known for its in-depth reporting and analysis.</p>
 </li>
      <li class='grid-item category-header' id='left-news'>
       <h1>Left News</h1>
     </li>
- <li class='grid-item'>
-  <h3>New York Times</h3>
-  <a href='https://www.nytimes.com/' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.nytimes.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>New York Times</h3>
     <img alt='New York Times Logo' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWMJnz4pGzmUHyey5kOJh7l0YJSG-bbKYv6g&amp;s' style='width:100px; height:auto;'/>
+    <p>A major American newspaper providing news, analysis, and opinion on national and international issues.</p>
   </a>
-  <p>A major American newspaper providing news, analysis, and opinion on national and international issues.</p>
 </li>
- <li class='grid-item'>
-  <h3>Drudge Report</h3>
-  <a href='https://www.drudgereport.com/' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.drudgereport.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Drudge Report</h3>
     <img alt='Drudge Report Logo' src='https://play-lh.googleusercontent.com/7gQ8rfBButkYKsI9x55zLnFf64_xsjOutFL0shuRZyaWzfp3jjilruw3BxN8WfW5lGI' style='width:100px; height:auto;'/>
+    <p>A news aggregation website known for its conservative-leaning content and breaking news stories.</p>
   </a>
-  <p>A news aggregation website known for its conservative-leaning content and breaking news stories.</p>
 </li>
-    <li class='grid-item'>
-  <h3>The Nation</h3>
-  <a href='https://www.thenation.com/' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.thenation.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>The Nation</h3>
     <img alt='The Nation Logo' src='https://api.athleticsnyc.site/wp-content/uploads/2023/07/thumbnail02-768x864.jpg' style='width:100px; height:auto;'/>
+    <p>A leading progressive magazine covering politics, social justice, and current affairs from a left-wing perspective.</p>
   </a>
-  <p>A leading progressive magazine covering politics, social justice, and current affairs from a left-wing perspective.</p>
 </li>
       <li class='grid-item category-header' id='world-news'>
       <h1>World News</h1>
     </li>
-    <li class='grid-item'>
-  <h3>The Straits Times</h3>
-  <a href='https://www.straitstimes.com/global' rel='noopener noreferrer' target='_blank'>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.straitstimes.com/global' rel='noopener noreferrer' target='_blank'>
+    <h3>The Straits Times</h3>
     <img alt='The Straits Times Logo' src='https://m.media-amazon.com/images/I/41Y-MUPJU7L.png' style='width:100px; height:auto;'/>
+    <p>A leading news source from Singapore, covering global and regional news with a focus on Asia and international affairs.</p>
   </a>
-  <p>A leading news source from Singapore, covering global and regional news with a focus on Asia and international affairs.</p>
 </li>
     <!-- Add more news items as needed -->
   </ul>
@@ -1095,12 +1085,13 @@ a:hover {
     <li class='grid-item category-header' id='soccer'>
       <h1>Soccer</h1>
     </li>
-    <li class='grid-item'>
-      <h3>Chelsea F.C.</h3>
-      <a href='https://www.chelseafc.com/' rel='noopener noreferrer' target='_blank'>
-        <img alt='Chelsea F.C. Logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png'/>
-      </a>
-    </li>
+ <li class='grid-item'>
+  <a class='full-link' href='https://www.chelseafc.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Chelsea F.C.</h3>
+    <img alt='Chelsea F.C. Logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png'/>
+    <p>Follow Chelsea F.C. for the latest news, match schedules, and player information from this iconic football club.</p>
+  </a>
+</li>
     <li class='grid-item category-header' id='baseball'>
       <h1>Baseball</h1>
     </li>
@@ -1845,15 +1836,17 @@ a:hover {
             <a href='https://openai.com/dall-e-2' rel='noopener noreferrer' target='_blank'>DALL-E</a>
             <a href='https://www.midjourney.com/' rel='noopener noreferrer' target='_blank'>Midjourney</a>
           </div>
-        </div>
-        
+        </div>   
         <div class='footer-column'>
-          <div class='copyright'>
-            &#169; <script>document.write(new Date().getFullYear())</script> Harris Family Register 
-            Licensed under the <a href='https://opensource.org/licenses/MIT' rel='noopener noreferrer' target='_blank'>MIT License</a>.
-          </div>
-          <div class='back-to-top'>
-            <button id='back-to-top'>Back to Top</button>
+  <div class='copyright'>
+    &#169; <script>document.write(new Date().getFullYear())</script> Harris Family Register 
+    Licensed under the <a href='https://opensource.org/licenses/MIT' rel='noopener noreferrer' target='_blank'>MIT License</a>.
+    <br>
+    <a href='https://github.com/HarrisFamilyRegister/harris-family-register-blogger-theme' rel='noopener noreferrer' target='_blank'>GitHub Repository</a>
+  <div class='back-to-top'>
+    <button id='back-to-top'>Back to Top</button>
+  </div>
+    </br>
           </div>
         </div>
       </div>
