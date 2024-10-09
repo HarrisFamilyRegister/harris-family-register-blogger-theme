@@ -207,11 +207,9 @@ a:hover {
     padding: 0;
     margin: 0;
 }
-
 .sidebar li {
     margin-bottom: 10px;
 }
-
 .sidebar a {
     font-size: 17px; /* Slight increase from default 16px */
     color: #ececeb;
@@ -219,21 +217,19 @@ a:hover {
     font-weight: 500;
     transition: color 0.3s, text-shadow 0.3s, font-size 0.3s ease; /* Smooth font-size transition */
 }
-
 .sidebar:hover {
     box-shadow: 0 0 15px rgba(236, 236, 235, 0.5); /* Glow effect on hover */
 }
-
 .sidebar a:hover {
     color: #ffffff;
     text-shadow: 0 0 5px #ececeb;
     font-size: 18px; /* Slight increase on hover */
 }
-
 /* Grid Layout */
 .grid-container {
     width: 100%;
 }
+
 .grid-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -244,6 +240,7 @@ a:hover {
     box-sizing: border-box;
     opacity: 0.94; /* Subtle opacity */
 }
+
 .grid-item {
     background-color: #1c1c1d; /* 6% lighter than #131314 */
     padding: 20px;
@@ -251,11 +248,15 @@ a:hover {
     border-radius: 8px;
     color: #ececeb;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicate that it's clickable */
+    position: relative; /* Ensure it can handle positioning */
 }
+
 .grid-item:hover {
-    transform: scale(1.05); /* Optional: slight scale on hover */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Optional: shadow on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
 }
+
 .grid-item-icon {
     width: 100px;
     height: 100px;
@@ -263,6 +264,12 @@ a:hover {
     object-fit: cover;
     margin-bottom: 10px;
 }
+
+.grid-item h3, .grid-item p {
+    margin: 0; /* Adjust margins to avoid extra negative space */
+    padding-bottom: 10px;
+}
+
 .grid-item.category-header {
     grid-column: 1 / -1;
     background: repeating-linear-gradient(
@@ -279,6 +286,12 @@ a:hover {
     padding: 15px;
     font-size: 24px;
     color: #ffffff; /* White text for contrast */
+}
+.category-header::marker {
+  content: none;
+}
+.grid-item::marker {
+  content: none;
 }
 /* Blog Post Styles */
 .post-outer-container {
@@ -515,7 +528,57 @@ a:hover {
     text-shadow: 0 0 16px #ffffff;
 }
 /* Responsive Styling */
-@media (max-width: 1200px) {
+/* Responsive Styling */
+
+/* Large Screens (1701px and above) */
+@media (min-width: 1701px) {
+    /* Default styles for large screens */
+}
+
+/* Extra Large Devices (1700px to 1667px) */
+@media (max-width: 1700px) and (min-width: 1668px) {
+    .sidebar {
+        width: calc(250px + (100vw - 1700px) * 0.1);
+        margin-right: calc(20px + (100vw - 1700px) * 0.02);
+    }
+    
+    .main-content {
+        width: calc(100% - 270px - (100vw - 1700px) * 0.12);
+    }
+}
+
+/* Large Devices (1667px to 1237px) */
+@media (max-width: 1667px) and (min-width: 1237px) {
+    .sidebar {
+        margin-left: auto;
+        margin-right: 20px;
+        width: 230px;
+    }
+    
+    .main-content {
+        width: calc(100% - 250px);
+    }
+}
+
+/* Medium Large Devices (1236px to 1101px) */
+@media (max-width: 1236px) and (min-width: 1101px) {
+    .content-wrapper {
+        position: relative;
+    }
+    .sidebar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+    }
+    .main-content {
+        width: calc(100% - 220px);
+        margin-right: 220px;
+    }
+}
+
+/* Medium Devices (1100px to 993px) */
+@media (max-width: 1100px) and (min-width: 993px) {
     .main-container {
         width: 95%;
     }
@@ -525,13 +588,16 @@ a:hover {
     .sidebar {
         position: relative;
         top: 0;
+        right: auto;
         margin-bottom: 20px;
         width: 100%;
         max-width: none;
+        order: -1;
     }
     .main-content {
         width: 100%;
         margin-left: 0;
+        margin-right: 0;
     }
     .grid-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -539,7 +605,10 @@ a:hover {
     .footer-content {
         gap: 30px;
     }
-@media (max-width: 992px) {
+}
+
+/* Small Devices (992px to 769px) */
+@media (max-width: 992px) and (min-width: 769px) {
     .header {
         padding: 10px;
     }
@@ -561,7 +630,10 @@ a:hover {
     .footer-column {
         flex-basis: calc(50% - 20px);
     }
-@media (max-width: 768px) {
+}
+
+/* Extra Small Devices (768px to 577px) */
+@media (max-width: 768px) and (min-width: 577px) {
     .main-container {
         margin: 20px auto;
     }
@@ -605,7 +677,10 @@ a:hover {
         width: 180px;
         height: 180px;
     }
-@media (max-width: 576px) {
+}
+
+/* Mobile Devices (576px to 481px) */
+@media (max-width: 576px) and (min-width: 481px) {
     .header-container {
         padding: 15px;
     }
@@ -639,6 +714,9 @@ a:hover {
     .footer-links a {
         font-size: 0.8em;
     }
+}
+
+/* Small Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .main-container {
         width: 100%;
@@ -676,17 +754,16 @@ a:hover {
         </img>
           </a>
     </div>
-    <nav class='nav-menu'>
-      <ul class='nav-list'>
-        <li><a class='nav-button' href='https://harrisfamilyregister.blogspot.com/p/news.html'>News</a></li>
-        <li><a class='nav-button' href='https://harrisfamilyregister.blogspot.com/p/ai-tools.html'>AI Tools</a></li>
-        <li><a class='nav-button' href='https://harrisfamilyregister.blogspot.com/p/youtube-playlists.html'>YouTube Playlists</a></li>
-        <li><a class='nav-button' href='https://harrisfamilyregister.blogspot.com/p/youtube-channels.html'>YouTube Channels</a></li>
-      </ul>
-    </nav>
+   <nav class='nav-menu'>
+  <ul class='nav-list'>
+    <li><a class='nav-button' href='/p/youtube-channels.html'>YouTube Channels</a></li>
+    <li><a class='nav-button' href='/p/news.html'>News</a></li>
+   <li><a class='nav-button' href='/p/sports.html'>Sports</a></li>
+    <li><a class='nav-button' href='/p/youtube-playlists.html'>YouTube Playlists</a></li>
+  </ul>
+</nav>
   </header>
 </div>
-
 <div class='main-container'>
   <div class='content-wrapper'>
    <nav class='sidebar'>
@@ -715,13 +792,6 @@ a:hover {
             <li><a href='#business-news'>Business News</a></li>
             <li><a href='#science-news'>Science News</a></li>
           </ul>
-        <b:elseif cond='data:view.pageId == &quot;4061486233526607147&quot;'/> <!-- AI Tools page -->
-          <ul>
-            <li><a href='#chatbots'>Chatbots and Conversational AI</a></li>
-            <li><a href='#image-generation'>Image Generation Tools</a></li>
-            <li><a href='#voice-synthesis'>Voice Synthesis Tools</a></li>
-            <li><a href='#data-analysis'>Text To Speech</a></li>
-          </ul>
         <b:elseif cond='data:view.pageId == &quot;7555220465387520625&quot;'/> <!-- YouTube Playlists page -->
           <ul>
             <li><a href='#computer-science'>000 &#8211; Computer Science, Information And General Works</a></li>
@@ -734,6 +804,12 @@ a:hover {
             <li><a href='#arts-recreation'>700 &#8211; Arts And Recreation</a></li>
             <li><a href='#literature'>800 &#8211; Literature</a></li>
             <li><a href='#history-geography'>900 &#8211; History And Geography</a></li>
+          </ul>
+        <b:elseif cond='data:view.pageId == &quot;8215345821007500895&quot;'/> <!-- Sports page -->
+          <ul>
+             <li><a href='#soccer'>Soccer</a></li>
+             <li><a href='#baseball'>Baseball</a></li>
+            <li><a href='#football'>Football</a></li>
           </ul>
         <b:else/> <!-- Default sidebar for other pages -->
           <ul>
@@ -851,20 +927,16 @@ a:hover {
     <img alt='Medlife Crisis channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kw3jRVl9M9F6rAvCJIrb_oyT32vau8A8bYlg60UcVC7Ik=s160-c-k-c0x00ffffff-no-rj'/>
   </a>
 </li>
-
-
          <!-- Category: 700 &#8211; Arts And Recreation -->
 <li class='grid-item category-header' id='arts-recreation'>
   <h1>700 &#8211; Arts And Recreation</h1>
 </li>
-
 <li class='grid-item'>
   <h3>Karolina Żebrowska</h3>
   <a href='https://www.youtube.com/c/Karolina%C5%BCebrowskax' rel='noopener noreferrer' target='_blank'>
     <img alt='Karolina Żebrowska channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nY1T7cH_lxcwDP5pKW3pLWhtfo2BmY2Rwk-BgpXfXoZQU=s176-c-k-c0x00ffffff-no-rj-mo'/>
   </a>
 </li>
-
 <li class='grid-item'>
   <h3>Perspective</h3>
   <a href='https://www.youtube.com/@PerspectiveArts' rel='noopener noreferrer' target='_blank'>
@@ -889,8 +961,7 @@ a:hover {
                     <img alt='Jill Bearup channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/DxPJ9mI6xxgTG5FPPBsx9NoymkPNQF2nqHZ32olB-q74k7RqPlQv9lT82MQFEUgcUZE5AwKsfw=s160-c-k-c0x00ffffff-no-rj'/>
                   </a>
                 </li>
-                <!-- Additional channels can go here -->
-              </ul>        
+                      
  <!-- Category: 800 &#8211; Literature -->
     <li class='grid-item category-header' id='literature'>
       <h1>800 &#8211; Literature</h1>
@@ -916,9 +987,10 @@ a:hover {
   <a href='https://www.youtube.com/@FallofCivilizations' rel='noopener noreferrer' target='_blank'>
     <img alt='Fall of Civilizations Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_k3dNbc-PV4Gj_I6bSZ6tvmha1C36aFFbQFuLBEaMgP_Q=s160-c-k-c0x00ffffff-no-rj'/>
   </a>
-  <p>A YouTube channel exploring the history of ancient civilizations and their collapse, providing in-depth narratives and visuals.</p>
+  <p>A YouTube channel exploring the history of ancient civilizations and their collapse, providing in-depth narratives and visuals</p>
 </li>
-
+ <!-- Additional channels can go here -->
+              </ul> 
 <b:include data='post' name='post'/>
 <b:elseif cond='data:view.pageId == &quot;7998491345952519445&quot;'/>
   <!-- News Page Content -->
@@ -1017,63 +1089,64 @@ a:hover {
 </li>
     <!-- Add more news items as needed -->
   </ul>
-<b:elseif cond='data:view.pageId == &quot;4061486233526607147&quot;'/>
-  <!-- AI Tools Page Content -->
+           <b:elseif cond='data:view.pageId == &quot;8215345821007500895&quot;'/>
+  <!-- Sports Page Content -->
   <ul class='grid-list'>
-    <!-- Category: AI Chatbots and Assistants -->
-    <li class='grid-item category-header' id='ai-chatbots'>
-      <h1>AI Chatbots and Assistants</h1>
+    <li class='grid-item category-header' id='soccer'>
+      <h1>Soccer</h1>
     </li>
-
     <li class='grid-item'>
-      <h3>ChatGPT</h3>
-      <a href='https://chatgpt.com/' rel='noopener noreferrer' target='_blank'>
-        <img alt='ChatGPT logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png?20230903231118'/>
+      <h3>Chelsea F.C.</h3>
+      <a href='https://www.chelseafc.com/' rel='noopener noreferrer' target='_blank'>
+        <img alt='Chelsea F.C. Logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png'/>
       </a>
     </li>
-
-    <li class='grid-item'>
-      <h3>Google Bard</h3>
-      <a href='https://bard.google.com/' rel='noopener noreferrer' target='_blank'>
-        <img alt='Google Bard logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Google_Bard_logo.svg/640px-Google_Bard_logo.svg.png'/>
-      </a>
+    <li class='grid-item category-header' id='baseball'>
+      <h1>Baseball</h1>
     </li>
-
-    <!-- Category: AI Image Generation -->
-    <li class='grid-item category-header' id='ai-image-generation'>
-      <h1>AI Image Generation</h1>
+  <li class='grid-item'>
+    <a class='full-link' href='https://www.mlb.com/mets' rel='noopener noreferrer' target='_blank'>
+        <h3>New York Mets</h3>
+        <img alt='New York Mets Logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/New_York_Mets.svg/1200px-New_York_Mets.svg.png'/>
+    </a>
+</li>  
+    <li class='grid-item category-header' id='football'>
+      <h1>Football</h1>
     </li>
-
-    <li class='grid-item'>
-      <h3>DALL-E</h3>
-      <a href='https://openai.com/dall-e-2' rel='noopener noreferrer' target='_blank'>
-        <img alt='DALL-E logo' class='grid-item-icon' src='https://thinglabs.io/wp-content/uploads/dall-e-logo1.png'/>
-      </a>
-    </li>
-
-    <li class='grid-item'>
-      <h3>Midjourney</h3>
-      <a href='https://www.midjourney.com/' rel='noopener noreferrer' target='_blank'>
-        <img alt='Midjourney logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Midjourney_Emblem.png/640px-Midjourney_Emblem.png'/>
-      </a>
-    </li>
-<!-- Add more categories and AI tools as needed -->
+ <li class='grid-item'>
+    <a class='full-link' href='https://www.newyorkjets.com/' rel='noopener noreferrer' target='_blank'>
+        <h3>New York Jets</h3>
+        <img alt='New York Jets Logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/New_York_Jets_logo.svg/1200px-New_York_Jets_logo.svg.png'/>
+    </a>
+</li>
   </ul>
 <b:elseif cond='data:view.pageId == &quot;7555220465387520625&quot;'/>
   <!-- YouTube Playlists Page Content -->
-  <ul class='grid-list'>
+
+            <ul class='grid-list'>
+                <li class='grid-item category-header' id='social-sciences'>
+  <h1>300 - Social Sciences</h1>
+</li>
+   <li class='grid-item'>
+  <a class='full-link' href='https://youtube.com/playlist?list=PL30C13C91CFFEFEA6&amp;si=2HxnOfsOaaaYhOvg' rel='noopener noreferrer' target='_blank'>
+    <h3>Justice with Michael Sandel</h3>
+    <img alt='Justice with Michael Sandel' class='grid-item-icon' src='https://i.ytimg.com/vi/kBdfcR-8hEY/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE&amp;rs=AOn4CLDx-9m2wpMM1xcw1CFfuqgiEC54Zg'/>
+    <p>JUSTICE is the first Harvard course to be made freely available online and on public television.</p>
+  </a>
+</li>
+
     <li class='grid-item category-header' id='technology'>
       <h1>600 - Technology</h1>
     </li>
     <li class='grid-item category-header' id='arts-recreation'>
       <h1>700 - Arts And Recreation</h1>
     </li>
-    <li class='grid-item'>
+  <li class='grid-item'>
+    <a class='full-link' href='https://www.youtube.com/watch?v=hH7cPKypbDE&amp;list=PL5JqSuIvtmAOZzE7Eq6Q4uyXgma2zEGj2' rel='noopener noreferrer' target='_blank'>
       <h3>Waldemar Januszczak | Perspective</h3>
-      <a href='https://www.youtube.com/watch?v=hH7cPKypbDE&amp;list=PL5JqSuIvtmAOZzE7Eq6Q4uyXgma2zEGj2' rel='noopener noreferrer' target='_blank'>
-        <img alt='Renaissance Unchained' class='grid-item-icon' src='https://thegolovine.wordpress.com/wp-content/uploads/2016/02/renaissance-unchained.png'/>
-      </a>
-    </li>
+      <img alt='Renaissance Unchained' class='grid-item-icon' src='https://thegolovine.wordpress.com/wp-content/uploads/2016/02/renaissance-unchained.png'/>
+    </a>
+</li>
     <!-- Add more playlist items as needed -->
   </ul>
 <b:else/>
@@ -1743,15 +1816,16 @@ a:hover {
   <div id='socket'>
     <div class='container'>
       <div class='footer-content'>
-       <div class='footer-column'>
-  <h3>Quick Links</h3>
-  <div class='footer-links'>
-    <a href='/'>Blog</a>
-     <a href='https://sites.google.com/view/harrisfamilyrecommends/comedy' rel='noopener noreferrer' target='_blank'>Google Site</a>
-    <a href='https://forms.gle/hwUJJP69eRqcciRw6' rel='noopener noreferrer' target='_blank'>Suggestion Box</a>
-    <a href='/About'>About</a>
-  </div>
+        <div class='footer-column'>
+          <h3>Quick Links</h3>
+          <div class='footer-links'>
+             <a href='https://harrisfamilyregist.wixsite.com/harrisfamilyregister' rel='noopener noreferrer' target='_blank'>Wix Site</a>
+            <a href='https://sites.google.com/view/harrisfamilyrecommends/comedy' rel='noopener noreferrer' target='_blank'>Google Site</a>
+            <a href='https://forms.gle/hwUJJP69eRqcciRw6' rel='noopener noreferrer' target='_blank'>Suggestion Box</a>
+            <a href='/About'>About</a>
+          </div>
         </div>
+        
         <div class='footer-column'>
           <h3>Wiki Resources</h3>
           <div class='footer-links'>
@@ -1762,6 +1836,17 @@ a:hover {
             <a href='https://www.wikipedia.org' rel='noopener noreferrer' target='_blank'>Wikipedia</a>
           </div>
         </div>
+        
+        <div class='footer-column'>
+          <h3>AI Tools</h3>
+          <div class='footer-links'>
+            <a href='https://chatgpt.com/' rel='noopener noreferrer' target='_blank'>ChatGPT</a>
+            <a href='https://bard.google.com/' rel='noopener noreferrer' target='_blank'>Google Bard</a>
+            <a href='https://openai.com/dall-e-2' rel='noopener noreferrer' target='_blank'>DALL-E</a>
+            <a href='https://www.midjourney.com/' rel='noopener noreferrer' target='_blank'>Midjourney</a>
+          </div>
+        </div>
+        
         <div class='footer-column'>
           <div class='copyright'>
             &#169; <script>document.write(new Date().getFullYear())</script> Harris Family Register 
@@ -1775,6 +1860,7 @@ a:hover {
     </div>
   </div>
 </footer>
+
 
 <button class='btn btn-outline-light' id='back-to-top-fixed'>Back to Top</button>
 
@@ -1866,6 +1952,24 @@ document.addEventListener('DOMContentLoaded', function() {
       break;
     }
   }
+});
+//]]>
+</script>
+ <script type='text/javascript'>
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all grid items that are supposed to be clickable
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    // Add a click event listener to each grid item
+    gridItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const link = item.querySelector('a.full-link');
+            if (link && link.href) {
+                window.open(link.href, '_blank');
+            }
+        });
+    });
 });
 //]]>
 </script>
