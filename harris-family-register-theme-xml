@@ -33,7 +33,6 @@
     <meta content='#ffffff' name='msapplication-TileColor'/>
   
 <b:skin><![CDATA[
-/* Your existing variable definitions and global styles remain unchanged */
 :root {
     /* Colors */
     --color-text-main: #ececeb;
@@ -1813,7 +1812,7 @@ a:hover {
              <a href='https://harrisfamilyregist.wixsite.com/harrisfamilyregister' rel='noopener noreferrer' target='_blank'>Wix Site</a>
             <a href='https://sites.google.com/view/harrisfamilyrecommends/comedy' rel='noopener noreferrer' target='_blank'>Google Site</a>
             <a href='https://forms.gle/hwUJJP69eRqcciRw6' rel='noopener noreferrer' target='_blank'>Suggestion Box</a>
-            <a href='/About'>About</a>
+            <a href='https://about.me/harrisfamilyregister' rel='noopener noreferrer' target='_blank'>About Us</a>
           </div>
         </div>
         
