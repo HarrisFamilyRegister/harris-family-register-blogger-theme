@@ -132,7 +132,6 @@ a:hover {
     transition: background-color 0.3s, color 0.3s, text-shadow 0.3s, transform 0.3s ease;
     cursor: pointer;
 }
-
 .nav-button:hover {
     background-color: var(--color-link-hover);
     color: #ECECEB;
@@ -194,14 +193,37 @@ a:hover {
     transition: box-shadow 0.3s ease, font-size 0.3s ease; /* Added font-size transition */
     box-shadow: 0 0 0 rgba(236, 236, 235, 0); /* Initial state with no glow */
 }
+.sidebar-top-image {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px; /* Space between image and Table of Contents */
+}
+
+.sidebar-top-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px; /* Adjust this value as needed */
+}
+
+.sidebar-top-image img:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.9); /* Stronger glow on hover */
+}
+#clickableImage {
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#clickableImage:hover {
+    transform: scale(1.05); /* Subtle zoom */
+}
 .sidebar h2 {
-    font-size: 26px; /* Slight increase from 24px */
+    font-size: 26px;
     font-weight: bold;
+    margin-top: 0; /* Removes extra space above the Table of Contents heading */
     margin-bottom: 15px;
     text-align: center;
     transition: font-size 0.3s ease; /* Smooth font-size transition */
 }
-
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -229,7 +251,6 @@ a:hover {
 .grid-container {
     width: 100%;
 }
-
 .grid-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -240,8 +261,7 @@ a:hover {
     box-sizing: border-box;
     opacity: 0.94; /* Subtle opacity */
 }
-
-.grid-item {
+.grid-item, .category-header {
     background-color: #1c1c1d; /* 6% lighter than #131314 */
     padding: 20px;
     text-align: center;
@@ -251,12 +271,10 @@ a:hover {
     cursor: pointer; /* Indicate that it's clickable */
     position: relative; /* Ensure it can handle positioning */
 }
-
-.grid-item:hover {
+.grid-item:hover, .category-header:hover {
     transform: scale(1.05); /* Slight scale on hover */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
 }
-
 .grid-item-icon {
     width: 100px;
     height: 100px;
@@ -264,12 +282,10 @@ a:hover {
     object-fit: cover;
     margin-bottom: 10px;
 }
-
 .grid-item h3, .grid-item p {
     margin: 0; /* Adjust margins to avoid extra negative space */
     padding-bottom: 10px;
 }
-
 .grid-item.category-header {
     grid-column: 1 / -1;
     background: repeating-linear-gradient(
@@ -287,11 +303,24 @@ a:hover {
     font-size: 24px;
     color: #ffffff; /* White text for contrast */
 }
-.category-header::marker {
-  content: none;
+.category-header::marker, .grid-item::marker {
+    content: none;
 }
-.grid-item::marker {
-  content: none;
+.category-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+.category-link:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.3s ease-in-out;
+}
+.category-header h1 {
+    margin: 0;
+    padding: 15px;
 }
 /* Blog Post Styles */
 .post-outer-container {
@@ -357,6 +386,17 @@ a:hover {
 .post-labels a:hover,
 .post-location a:hover {
     text-decoration: underline;
+}
+.category-page-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-text-main);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--color-link);
+    text-transform: uppercase;
 }
 /* Comment Styles */
 .comments {
@@ -458,7 +498,6 @@ a:hover {
     color: #ECECEB;
     padding: 30px 0;
     margin-top: 20px;
-}
 #socket {
     width: 100%;
     max-width: var(--max-width-wrapper);
@@ -786,11 +825,9 @@ a:hover {
     .grid-item h3 {
         font-size: 1.1em;
     }
-
     .grid-item p {
         font-size: 0.95em;
     }
-
     .grid-item.category-header h1 {
         font-size: 1.4em;
     }
@@ -845,7 +882,12 @@ a:hover {
 </div>
 <div class='main-container'>
   <div class='content-wrapper'>
-   <nav class='sidebar'>
+    <nav class='sidebar'>
+  <div class='sidebar-top-image'>
+  <a id='randomCategoryLink'>
+    <img alt='Lorenz Attractor Button' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDJ9Tv13WveuWzbiFAf6W6kjnbdamGDg2oQ0A3XOWaQ8ExDt7398mraEiW1B3fvgkTKVx1AJvbpavYI7YbKVrFwu7mwP3EdZKCFPpG-F-V0qBPh91logFdQEuZ55KKYBJtOUupQD7_Ia1z2Tiuvubc-4gLcm2AOQyLLLLrUasU8fYu1fUrCvzdi5oXOYA/s320/Rounded%20Chaos%20Theory%20Logo.png' style='background: transparent;'/>
+  </a>
+</div>
       <h2>Table of Contents</h2>
       <b:if cond='data:view.isPage'>
         <b:if cond='data:view.pageId == &quot;7326251779722951260&quot;'> <!-- YouTube Channels page -->
@@ -868,7 +910,7 @@ a:hover {
             <li><a href='#center-news'>Center News</a></li>
             <li><a href='#left-news'>Left News</a></li>          
            <li><a href='#world-news'>World News</a></li>
-            <li><a href='#business-news'>Business News</a></li>
+            <li><a href='#anarchist-news'>Anarchist News</a></li>
             <li><a href='#science-news'>Science News</a></li>
           </ul>
         <b:elseif cond='data:view.pageId == &quot;7555220465387520625&quot;'/> <!-- YouTube Playlists page -->
@@ -890,7 +932,43 @@ a:hover {
              <li><a href='#baseball'>Baseball</a></li>
             <li><a href='#football'>Football</a></li>
           </ul>
-        <b:else/> <!-- Default sidebar for other pages -->
+         <b:elseif cond='data:view.pageId == &quot;2896747660725305435&quot;'/> <!-- Your specific page -->
+     <ul>
+      <li><a href='#social-sciences-a'>A: &quot;The Adventurous A&quot;</a></li>
+      <li><a href='#social-sciences-b'>B: &quot;The Bold Beauty of B&quot;</a></li>
+      <li><a href='#social-sciences-c'>C: &quot;C: Catalyst of Curiosity&quot;</a></li>
+      <li><a href='#social-sciences-d'>D: &quot;D: Defining Discoveries&quot;</a></li>
+      <li><a href='#social-sciences-e'>E: &quot;E: Exploring Excellence&quot;</a></li>
+      <li><a href='#social-sciences-f'>F: &quot;F: Foundations of Knowledge&quot;</a></li>
+      <li><a href='#social-sciences-g'>G: &quot;G: Gateway to Greatness&quot;</a></li>
+      <li><a href='#social-sciences-h'>H: &quot;H: Horizons of Learning&quot;</a></li>
+      <li><a href='#social-sciences-i'>I: &quot;I: Illuminating Insights&quot;</a></li>
+      <li><a href='#social-sciences-j'>J: &quot;J: Journeys of Knowledge&quot;</a></li>
+      <li><a href='#social-sciences-k'>K: &quot;K: Keys to Curiosity&quot;</a></li>
+      <li><a href='#social-sciences-l'>L: &quot;L: Luminous Learnings&quot;</a></li>
+      <li><a href='#social-sciences-m'>M: &quot;M: Marvels of the Mind&quot;</a></li>
+      <li><a href='#social-sciences-n'>N: &quot;N: Navigating New Ideas&quot;</a></li>
+      <li><a href='#social-sciences-o'>O: &quot;O: Opening Opportunities&quot;</a></li>
+      <li><a href='#social-sciences-p'>P: &quot;P: Pathways of Progress&quot;</a></li>
+      <li><a href='#social-sciences-q'>Q: &quot;Q: Quest for Knowledge&quot;</a></li>
+      <li><a href='#social-sciences-r'>R: &quot;R: Realms of Research&quot;</a></li>
+      <li><a href='#social-sciences-s'>S: &quot;S: Secrets of Science&quot;</a></li>
+      <li><a href='#social-sciences-t'>T: &quot;T: Trailblazing Truths&quot;</a></li>
+      <li><a href='#social-sciences-u'>U: &quot;U: Unveiling Understandings&quot;</a></li>
+      <li><a href='#social-sciences-v'>V: &quot;V: Vessels of Vision&quot;</a></li>
+      <li><a href='#social-sciences-w'>W: &quot;W: Windows to Wisdom&quot;</a></li>
+      <li><a href='#social-sciences-y'>Y: &quot;Y: Yarns of Youthful Ideas&quot;</a></li>
+    </ul>
+          <b:elseif cond='data:view.pageId == &quot;848883224153258319&quot;'/> <!-- Left News -->
+<ul>
+  <li><a href='#dissident-leftnews'>Dissident Left News</a></li>
+  <li><a href='#corporate-leftnews'>Corporate Left News</a></li>
+  <li><a href='#independent-leftnews'>Independent Left News</a></li>
+  <li><a href='#anarchist-leftnews'>Anarchist Left News</a></li>
+  <li><a href='#foreign-leftnews'>Foreign Left News</a></li>
+  <li><a href='#thinktank-leftnews'>Thinktank Left News</a></li>
+</ul>
+          <b:else/> <!-- Default sidebar for other pages -->
           <ul>
             <li><a href='#section1'>Section 1</a></li>
             <li><a href='#section2'>Section 2</a></li>
@@ -927,6 +1005,14 @@ a:hover {
     <p>Explore deep conversations on science, technology, and philosophy with Lex Fridman.</p>
   </a>
 </li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@NetworkChuck' rel='noopener noreferrer' target='_blank'>
+    <h3>Network Chuck</h3>
+    <img alt='Network Chuck channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_mSw0rri2VsHv7XyXcMv931baO8QUfqIMFEGHx-7xumLG0=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Master networking, IT, and tech skills with fun tutorials and insights from Network Chuck.</p>
+  </a>
+</li>
+
    <!-- Category: 100 &#8211; Philosophy And Psychology -->
 <li class='grid-item category-header' id='philosophy-and-psychology'>
   <h1>100 &#8211; Philosophy And Psychology</h1>
@@ -938,6 +1024,21 @@ a:hover {
     <p>Delve into psychology, philosophy, and self-help insights with Jordan B. Peterson.</p>
   </a>
 </li>
+                            <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@dr.michaelsugrue' rel='noopener noreferrer' target='_blank'>
+    <h3>Michael Sugrue</h3>
+    <img alt='Michael Sugrue channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_msGxtZvcz4vtGsDmQ9jPOonuI1UyBTw_n48_herRS8QA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore deep insights on philosophy, history, and education with Michael Sugrue.</p>
+  </a>
+</li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@DailyStoic' rel='noopener noreferrer' target='_blank'>
+    <h3>Daily Stoic</h3>
+    <img alt='Daily Stoic channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/RjImzyCYScR7M_P5H1OAmGhugkXbhjku92eMrjjqSWwoDwhS4Ds8bgWnMnsxAxFCMBCQQVSC=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore the principles of Stoicism and practical wisdom for modern life with Daily Stoic.</p>
+  </a>
+</li>
+
    <!-- Category: 200 &#8211; Religion -->
 <li class='grid-item category-header' id='religion'>
   <h1>200 &#8211; Religion</h1>
@@ -949,9 +1050,25 @@ a:hover {
     <p>Join Alyssa Grenfell for insights on personal development and wellness.</p>
   </a>
 </li>
-           <!-- Category: 300 &#8211; Social Sciences -->
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@RyanReevesM' rel='noopener noreferrer' target='_blank'>
+    <h3>Ryan Reeves</h3>
+    <img alt='Ryan Reeves channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_ncMyocnJlIsgtz84O5uZ6t_G09Kc-uN3VtyPtPpi8EogE=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Dive into historical theology, church history, and Christian thought with Ryan Reeves.</p>
+  </a>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@ReadyToHarvest' rel='noopener noreferrer' target='_blank'>
+    <h3>Ready to Harvest</h3>
+    <img alt='Ready to Harvest channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/Uzk0zxqnIpojd0RgRH5GWaEC1NUOV9-5LsOCbkoQEivKmhtXGQxO2bY46O9N35L3aovJXGLAFAk=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Learn about religious denominations, beliefs, and comparisons with Ready to Harvest.</p>
+  </a>
+</li>
+        <!-- Category: 300 &#8211; Social Sciences -->
 <li class='grid-item category-header' id='social-sciences'>
-  <h1>300 &#8211; Social Sciences</h1>
+  <a class='category-link' href='/p/300-social-sciences-youtube-channels.html'>
+    <h1>300 &#8211; Social Sciences</h1>
+  </a>
 </li>
 <li class='grid-item'>
   <a class='full-link' href='https://www.youtube.com/@econtalkwithruss' rel='noopener noreferrer' target='_blank'>
@@ -985,6 +1102,21 @@ a:hover {
     <p>Explore the intricacies of language and storytelling with Words Unravelled.</p>
   </a>
 </li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@AyanAcademy' rel='noopener noreferrer' target='_blank'>
+    <h3>Ayan Academy</h3>
+    <img alt='Ayan Academy channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/X4RXuAqiWQ0di68QT7uN3Ou1zdam3FytIcGj1EVK6VAnIb1YoPpvcM5OPS2e_eQYWbEJqe2-k1w=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Learn about programming, software development, and technology insights with Ayan Academy.</p>
+  </a>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@Thelinguist' rel='noopener noreferrer' target='_blank'>
+    <h3>Lingosteve</h3>
+    <img alt='Lingosteve channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_mKdbvZ6naFnbw-mIbszy-LSH4e0fALn6ufyOwMITE7T8c=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Dive into language learning tips, strategies, and discussions with Lingosteve.</p>
+  </a>
+</li>
+
            <!-- Category: 500 &#8211; Pure Science -->
 <li class='grid-item category-header' id='pure-science'>
   <h1>500 &#8211; Pure Science</h1>
@@ -1005,6 +1137,20 @@ a:hover {
     <h3>Medlife Crisis</h3>
     <img alt='Medlife Crisis channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kw3jRVl9M9F6rAvCJIrb_oyT32vau8A8bYlg60UcVC7Ik=s160-c-k-c0x00ffffff-no-rj'/>
     <p>Join Medlife Crisis for engaging discussions on health, wellness, and medical topics.</p>
+  </a>
+</li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@EngineeringMindset' rel='noopener noreferrer' target='_blank'>
+    <h3>The Engineering Mindset</h3>
+    <img alt='The Engineering Mindset channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kfAij6p5pW1Mz69fluoU2bNEWRy4jFoom9BtIcX3e02g=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore engineering principles, systems, and how they impact our daily lives with The Engineering Mindset.</p>
+  </a>
+</li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@chubbyemu' rel='noopener noreferrer' target='_blank'>
+    <h3>Chubbyemu</h3>
+    <img alt='Chubbyemu channel icon' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kiqKexH8TSXwF-kn4QRveWD5HIv1vC90CLNkS22D7KGak=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover fascinating medical cases and in-depth health explanations with Chubbyemu.</p>
   </a>
 </li>
          <!-- Category: 700 &#8211; Arts And Recreation -->
@@ -1140,9 +1286,11 @@ a:hover {
     <p>A respected business-focused newspaper known for its in-depth reporting and analysis.</p>
   </a>
 </li>
-     <li class='grid-item category-header' id='left-news'>
-      <h1>Left News</h1>
-    </li>
+    <li class='grid-item category-header' id='left-news'>
+  <a class='category-link' href='/p/left-news.html'>
+    <h1>Left News</h1>
+  </a>
+</li>
 <li class='grid-item'>
   <a class='full-link' href='https://www.nytimes.com/' rel='noopener noreferrer' target='_blank'>
     <h3>New York Times</h3>
@@ -1164,6 +1312,13 @@ a:hover {
     <p>A leading progressive magazine covering politics, social justice, and current affairs from a left-wing perspective.</p>
   </a>
 </li>
+    <li class='grid-item'>
+  <a class='full-link' href='https://thegrayzone.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>The Grayzone</h3>
+    <img alt='The Grayzone Logo' src='https://thegrayzone.com/wp-content/uploads/2020/08/the-grayzone-logo.png' style='width:100px; height:auto;'/>
+    <p>A platform providing investigative journalism and critiques of U.S. foreign policy and media narratives.</p>
+  </a>
+</li>
       <li class='grid-item category-header' id='world-news'>
       <h1>World News</h1>
     </li>
@@ -1174,7 +1329,47 @@ a:hover {
     <p>A leading news source from Singapore, covering global and regional news with a focus on Asia and international affairs.</p>
   </a>
 </li>
+    <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@WION' rel='noopener noreferrer' target='_blank'>
+    <h3>WION</h3>
+    <img alt='WION Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/r2ZGA9E-wWJha_PIoNh8df3C_Y8uenieTqQ-Qj2-ibWQ6T__-mVxUvplOqoagFLsicskn-j3sw=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>WION (World Is One News) is a global news network covering a range of topics, including international politics, technology, and world affairs with a focus on Asian perspectives.</p>
+  </a>
+</li>
+    <!-- Category: Anarchist News -->
+<li class='grid-item category-header' id='anarchist-news'>
+  <h1>Anarchist News</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://c4ss.org/' rel='noopener noreferrer' target='_blank'>
+    <h3>Center for a Stateless Society</h3>
+    <img alt='Center for a Stateless Society Logo' class='grid-item-icon' src='https://github.com/HarrisFamilyRegister/harris-family-register-blogger-theme/blob/main/Images%20Harris%20Fam/Screenshot%202024-10-10%20033006.png?raw=true'/>
+    <p>The Center for a Stateless Society provides news, commentary, and analysis on anarchist topics, focusing on alternatives to state-based governance.</p>
+  </a>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://mises.org/' rel='noopener noreferrer' target='_blank'>
+    <h3>Mises Institute</h3>
+    <img alt='Mises Institute Logo' class='grid-item-icon' src='https://upload.wikimedia.org/wikipedia/commons/9/90/Mises_Institute.jpg'/>
+    <p>The Mises Institute promotes Austrian economics, individual freedom, and limited government, providing resources, articles, and lectures from leading libertarian and free-market scholars.</p>
+  </a>
+</li>
     <!-- Add more news items as needed -->
+  </ul>
+          <b:elseif cond='data:view.pageId == &quot;848883224153258319&quot;'/>
+  <!-- Left News Page Content -->
+  <ul class='grid-list'>
+    <!-- Category: Independent Left -->
+    <li class='grid-item category-header' id='independent-left'>
+      <h1>Independent Left</h1>
+    </li>
+    <li class='grid-item'>
+      <a class='full-link' href='https://www.dropsitenews.com/' rel='noopener noreferrer' target='_blank'>
+        <h3>DropSite</h3>
+        <img alt='DropSite channel icon' class='grid-item-icon' src='https://substackcdn.com/image/fetch/w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd02a3749-a1f0-4749-a762-d0b01ebedb26_647x647.png'/>
+        <p>Explore insights on Israel, startups, and technology in Gaza.</p>
+      </a>
+    </li>
   </ul>
            <b:elseif cond='data:view.pageId == &quot;8215345821007500895&quot;'/>
   <!-- Sports Page Content -->
@@ -1210,42 +1405,305 @@ a:hover {
   </ul>
 <b:elseif cond='data:view.pageId == &quot;7555220465387520625&quot;'/>
   <!-- YouTube Playlists Page Content -->
-
-            <ul class='grid-list'>
-                <li class='grid-item category-header' id='social-sciences'>
-  <h1>300 - Social Sciences</h1>
-</li>
+  <ul class='grid-list'>
+    <li class='grid-item category-header' id='social-sciences'>
+      <h1>300 - Social Sciences</h1>
+    </li>
    <li class='grid-item'>
-  <a class='full-link' href='https://youtube.com/playlist?list=PL30C13C91CFFEFEA6&amp;si=2HxnOfsOaaaYhOvg' rel='noopener noreferrer' target='_blank'>
-    <h3>Justice with Michael Sandel</h3>
-    <img alt='Justice with Michael Sandel' class='grid-item-icon' src='https://i.ytimg.com/vi/kBdfcR-8hEY/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE&amp;rs=AOn4CLDx-9m2wpMM1xcw1CFfuqgiEC54Zg'/>
-    <p>JUSTICE is the first Harvard course to be made freely available online and on public television.</p>
-  </a>
-</li>
-
+      <a class='full-link' href='https://youtube.com/playlist?list=PL30C13C91CFFEFEA6&amp;si=2HxnOfsOaaaYhOvg' rel='noopener noreferrer' target='_blank'>
+        <h3>Justice with Michael Sandel</h3>
+        <img alt='Justice with Michael Sandel' class='grid-item-icon' src='https://i.ytimg.com/vi/kBdfcR-8hEY/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE&amp;rs=AOn4CLDx-9m2wpMM1xcw1CFfuqgiEC54Zg'/>
+        <p>JUSTICE is the first Harvard course to be made freely available online and on public television.</p>
+      </a>
+    </li>
     <li class='grid-item category-header' id='technology'>
       <h1>600 - Technology</h1>
     </li>
     <li class='grid-item category-header' id='arts-recreation'>
       <h1>700 - Arts And Recreation</h1>
     </li>
-  <li class='grid-item'>
-    <a class='full-link' href='https://www.youtube.com/watch?v=hH7cPKypbDE&amp;list=PL5JqSuIvtmAOZzE7Eq6Q4uyXgma2zEGj2' rel='noopener noreferrer' target='_blank'>
-      <h3>Waldemar Januszczak | Perspective</h3>
-      <img alt='Renaissance Unchained' class='grid-item-icon' src='https://thegolovine.wordpress.com/wp-content/uploads/2016/02/renaissance-unchained.png'/>
-    </a>
-</li>
+    <li class='grid-item'>
+      <a class='full-link' href='https://www.youtube.com/watch?v=hH7cPKypbDE&amp;list=PL5JqSuIvtmAOZzE7Eq6Q4uyXgma2zEGj2' rel='noopener noreferrer' target='_blank'>
+        <h3>Waldemar Januszczak | Perspective</h3>
+        <img alt='Renaissance Unchained' class='grid-item-icon' src='https://thegolovine.wordpress.com/wp-content/uploads/2016/02/renaissance-unchained.png'/>
+      </a>
+    </li>
     <!-- Add more playlist items as needed -->
   </ul>
-<b:else/>
+<b:elseif cond='data:view.pageId == &quot;2896747660725305435&quot;'/>
+<ul class='grid-list'>
+  <!-- Category: A &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='adventurous-a'>
+  <h1>A</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@AshleyHodgson' rel='noopener noreferrer' target='_blank'>
+    <h3>Ashley Hodgson</h3>
+    <img alt='Ashley Hodgson YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_l5ohOmJN4uZ6hF035CQMVPyskI0D0rE85XAiBuXb2VpAc=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover insightful discussions on economics, education, and society with Ashley Hodgson on YouTube.</p>
+  </a>
+</li>        
+  <!-- Category: B &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-b'>
+  <h1>B</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@BrookingsInstitution' rel='noopener noreferrer' target='_blank'>
+    <h3>Brookings Institution</h3>
+    <img alt='Brookings Institution YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/qtpqIwZM5nPkwOIjZi3Fpii3GK4MtTr8jj5G9GCEbkAKKrUBJLuKq9avXFh-_wDdpgoGU7zw=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore policy analysis and in-depth research on social, political, and economic issues with the Brookings Institution on YouTube.</p>
+  </a>
+</li>
+  <!-- Category: C &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-c'>
+  <h1>C</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@CriminologyWeb' rel='noopener noreferrer' target='_blank'>
+    <h3>CriminologyWeb</h3>
+    <img alt='CriminologyWeb YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_mR700apxstuDT64pRajABNO43Vp1GpiMLhpZ_PIU2URA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore criminology, criminal justice, and related topics with CriminologyWeb on YouTube.</p>
+  </a>
+</li>
+<!-- Category: D &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-d'>
+  <h1>D</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@Danny.Hatcher' rel='noopener noreferrer' target='_blank'>
+    <h3>Danny Hatcher</h3>
+    <img alt='Danny Hatcher YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/HyZPgwWj5S1EAsDp4vvfZ-vzTfsS-TnC3Q3GQ6raS-z-8AIjNaZ9I6UEycF-Hi6AdywRyTGk6SU=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Delve into productivity, personal growth, and systems thinking with Danny Hatcher on YouTube.</p>
+  </a>
+</li>
+  <!-- Category: E &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-e'>
+  <h1>E</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@econtalkwithruss' rel='noopener noreferrer' target='_blank'>
+    <h3>EconTalk</h3>
+    <img alt='EconTalk YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kh461JJLWhX37AF0F0vRT0k6jtH2J5-iDvI0KTAzyLJWM=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore discussions on economics, philosophy, and culture with Russ Roberts on EconTalk.</p>
+  </a>
+</li>
+<!-- Category: F &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-f'>
+  <h1>F</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@FairForAll_Org' rel='noopener noreferrer' target='_blank'>
+    <h3>Foundation Against Intolerance &amp; Racism</h3>
+    <img alt='Foundation Against Intolerance &amp; Racism YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_lh-zW9mQW9ZIpLf7pmnuoZ4uKf7lYej1XvmRwOHZMgJA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore initiatives promoting fairness, understanding, and tolerance through education and advocacy on the Foundation Against Intolerance &amp; Racism YouTube channel.</p>
+  </a>
+</li>
+  <!-- Category: G &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-g'>
+  <h1>G</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@GrayWinsler' rel='noopener noreferrer' target='_blank'>
+    <h3>Gray Winsler</h3>
+    <img alt='Gray Winsler YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kOYL9SrRec_25MjDF1QxrEsjrnuEUK7WgBwCJ0p4EoMAA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover Gray Winsler&#8217;s content on social science, philosophy, and critical thought through engaging videos and discussions.</p>
+  </a>
+</li>
+    <!-- Category: H &#8211; Social Science YouTube Channels -->
+  <li class='grid-item category-header' id='social-sciences-h'>
+    <h1>H</h1>
+  </li>
+  <li class='grid-item'>
+    <a class='full-link' href='https://www.youtube.com/@HGSSS' rel='noopener noreferrer' target='_blank'>
+      <h3>Henry George School of Social Science</h3>
+      <img alt='Henry George School of Social Science Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/SMJI39tx7ijd5vxYRo1d-wYNrzXdl6c9n0Yet-sPs9gXNA4YJPYN0JtlE3cOl--xNs3Adwrx=s160-c-k-c0x00ffffff-no-rj'/>
+      <p>Explore social science and economic teachings with the Henry George School of Social Science on their YouTube channel.</p>
+    </a>
+  </li>
+<!-- Category: I &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-i'>
+  <h1>I</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@independentinstitute' rel='noopener noreferrer' target='_blank'>
+    <h3>Independent Institute</h3>
+    <img alt='Independent Institute YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_kYFKdqG_55lv35vOXeM9NcOabMnoEteGyKNuSvM-jOmFI=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore in-depth research and commentary on economic, social, and political issues from the Independent Institute on their YouTube channel.</p>
+  </a>
+</li>
+  <!-- Category: J &#8211; Social Science YouTube Channels -->
+  <li class='grid-item category-header' id='social-sciences-j'>
+    <h1>J</h1>
+  </li>
+  <li class='grid-item'>
+    <a class='full-link' href='https://www.youtube.com/@JJMcCullough' rel='noopener noreferrer' target='_blank'>
+      <h3>J.J. McCullough</h3>
+      <img alt='J.J. McCullough YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/7m4gq8laC41OZAFjhvYSKBUaEeuhMIeVZ5dMEFsjjhNre8GTxo58-NQUpKU0rNBJZbkuQjBX7w=s160-c-k-c0x00ffffff-no-rj'/>
+      <p>Explore commentary and analysis on political and social topics with J.J. McCullough on YouTube.</p>
+    </a>
+  </li>
+  <!-- Category: K &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-k'>
+  <h1>K</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@KoreanStoryTellers' rel='noopener noreferrer' target='_blank'>
+    <h3>KST by The Korea Times</h3>
+    <img alt='KST by The Korea Times YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/BXCllFzRVsPw5wttwTE97kU9SiWxJR1VF_v3osX0Xdvw_2K32u6ufP97z1uZUSZsC7Kfwipwmg8=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover compelling stories and insights from Korea on the KST by The Korea Times YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: L &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-l'>
+  <h1>L</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@LibertarianismDotOrg' rel='noopener noreferrer' target='_blank'>
+    <h3>Libertarianism.org</h3>
+    <img alt='Libertarianism Org YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/Efr--tyzuwVwVoABVegIF-PrUMcXAvmEmO-UO5BUiFnUSijKNU7kAmlWtgwj4OGwziZa-zOOBoU=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore the ideas, history, and philosophy of libertarianism with Libertarianism Org on YouTube.</p>
+  </a>
+</li>
+<!-- Category: M &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-m'>
+  <h1>M</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@MoneyWeekVideos' rel='noopener noreferrer' target='_blank'>
+    <h3>MoneyWeek</h3>
+    <img alt='MoneyWeek YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_lAW0AczybqGmEZzb2N7fH0n3dW1SA4RWc7qnxSNupNYLI=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Learn about financial markets, economics, and wealth management with MoneyWeek&#39;s videos on YouTube.</p>
+  </a>
+</li>
+<!-- Category: N &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-n'>
+  <h1>N</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@NewEconomicThinking' rel='noopener noreferrer' target='_blank'>
+    <h3>New Economic Thinking</h3>
+    <img alt='New Economic Thinking YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/y5oME3zQAOvkQr7CI-IHLr7CFbzcjarMV3eE40SG98U6VCNde0k3SBI238esgdd2XfLqAsZHJA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore innovative ideas and analyses about economic systems with the New Economic Thinking YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: O &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-o'>
+  <h1>O</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@ObjectiveStandard' rel='noopener noreferrer' target='_blank'>
+    <h3>&#9698; Objective Standard Institute</h3>
+    <img alt='Objective Standard Institute YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/YwOMA3txD8eEuSrOg9oB0MrcSo2AMZz6Hvd8GgUJWGMunahozk60hlB84u3deUEPG1hLjMbm=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Engage with discussions on philosophy, economics, and more with the Objective Standard Institute YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: P &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-p'>
+  <h1>P</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@pewresearch' rel='noopener noreferrer' target='_blank'>
+    <h3>Pew Research Center</h3>
+    <img alt='Pew Research Center YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_lyh-2D2PNTt3Az_SC1kzujNoSPBjMYF9w8-mFhajokOgI=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore in-depth data-driven research on social issues, demographics, and trends with Pew Research Center&#39;s YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: Q &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-q'>
+  <h1>Q</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@Qznews' rel='noopener noreferrer' target='_blank'>
+    <h3>Quartz</h3>
+    <img alt='Quartz YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nGQMXOFmFzAkB6jrQC57xhnxg_SQj76dLkwVmFjU-CpRM=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Discover global business news and trends, data-driven insights, and thought-provoking stories from Quartz on their YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: R &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-r'>
+  <h1>R</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@ReasonTV' rel='noopener noreferrer' target='_blank'>
+    <h3>ReasonTV</h3>
+    <img alt='ReasonTV YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_laWbFN7VLpzIpPbp2eO_YiLXnMZV2R5NBawv6mtz9jDZ0=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore libertarian perspectives on news, politics, and culture through insightful interviews and commentary on ReasonTV&#39;s YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: S &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-s'>
+  <h1>S</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@SomethingsOffwithAndrewHeaton' rel='noopener noreferrer' target='_blank'>
+    <h3>Something&#39;s Off with Andrew Heaton</h3>
+    <img alt='Something&apos;s Off with Andrew Heaton YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_k-cPg2gZfS3lAmB5RdTvBI-YVm5-3AhSgJMXlemRE89g=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Engage in humorous and thought-provoking discussions on politics, economics, and social issues with Andrew Heaton.</p>
+  </a>
+</li>
+<!-- Category: T &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-t'>
+  <h1>T</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@TheHinduOfficial' rel='noopener noreferrer' target='_blank'>
+    <h3>The Hindu</h3>
+    <img alt='The Hindu YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_noBA8yminc26WM23DspWUL9P_mrUoZXhPH5uX8dq9gsfA=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Stay informed with the latest news and analyses on current events, politics, and culture from The Hindu&#39;s official YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: U &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-u'>
+  <h1>U</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@UChicagoSSD/featured' rel='noopener noreferrer' target='_blank'>
+    <h3>UChicago Social Sciences</h3>
+    <img alt='UChicago Social Sciences YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/2OokIh7sbdF8PwODaQaLtsJCQ_ijf1DPz049S2b6xJh4Q7ujPPOaVw3uIEHrBI_gdBW19ZEY5Q=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore in-depth discussions, research highlights, and thought leadership in the field of social sciences from the University of Chicago.</p>
+  </a>
+</li>
+<!-- Category: V &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-v'>
+  <h1>V</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@VladVexler' rel='noopener noreferrer' target='_blank'>
+    <h3>Vlad Vexler</h3>
+    <img alt='Vlad Vexler YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_mM_nl68n6OT6P-bka0D2ctaxfwkj87HwyLK0Q6vaY7uNc=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Engage with in-depth discussions on politics, philosophy, and culture with Vlad Vexler on YouTube.</p>
+  </a>
+</li>
+<!-- Category: W &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-w'>
+  <h1>W</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@wsj' rel='noopener noreferrer' target='_blank'>
+    <h3>The Wall Street Journal</h3>
+    <img alt='The Wall Street Journal YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/JSS6ykU01xhBZd_sjDQrEmefuslfSPE0FNyVuw_QvRpn_J6SNX5aP0YGfw0h-wElil_PUw30O2o=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Stay updated with global news, financial markets, and expert analysis from The Wall Street Journal YouTube channel.</p>
+  </a>
+</li>
+<!-- Category: Y &#8211; Social Science YouTube Channels -->
+<li class='grid-item category-header' id='social-sciences-y'>
+  <h1>Y</h1>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@YuvalNoahHarari' rel='noopener noreferrer' target='_blank'>
+    <h3>Yuval Noah Harari</h3>
+    <img alt='Yuval Noah Harari YouTube Channel Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/joj3rjhjH21r352YSneE8IERv6fw8kh07s6xOifJ7M5zW3o46-sNFQDXpwsmV-2MDnFcDqnbzQ=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore topics on history, technology, and the future of humanity with historian and author Yuval Noah Harari on his YouTube channel.</p>
+  </a>
+</li>
+
+</ul>
+  
+            <b:else/> 
+             
   <!-- Default Page Content -->
   <b:include data='post' name='post'/>
 </b:if>
-        </div>
-        <div class='comments'>
-          <b:include data='post' name='comments'/>
-        </div>
-      <b:else/>
 <b:section id='content'>
   <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='2' visible='true'>
     <b:widget-settings>
@@ -1783,6 +2241,16 @@ a:hover {
     <b:includable id='postTitle' var='post'>
   <a expr:name='data:post.id'/>
   <b:if cond='data:post.title != &quot;&quot;'>
+ <b:if cond='data:view.isPage'>
+  <b:if cond='data:view.pageId in [&quot;2896747660725305435;, &quot;PAGE_ID_2&quot;, &quot;PAGE_ID_3&quot;]'>
+    <h1 class='category-page-title'>
+      <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
+        <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+      <b:else/>
+        <data:post.title/>
+      </b:if>
+    </h1>
+  <b:else/>
     <h3 class='post-title entry-title'>
       <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
         <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
@@ -1790,6 +2258,16 @@ a:hover {
         <data:post.title/>
       </b:if>
     </h3>
+  </b:if>
+<b:else/>
+  <h3 class='post-title entry-title'>
+    <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
+      <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+    <b:else/>
+      <data:post.title/>
+    </b:if>
+  </h3>
+</b:if>
   </b:if>
 </b:includable>
     <b:includable id='previousPageLink'>
@@ -1894,7 +2372,7 @@ a:hover {
 </b:includable>
   </b:widget>
 </b:section>
-   
+        </div>
       </b:if>
 </div>
   </div>
@@ -2045,20 +2523,59 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //]]>
 </script>
- <script type='text/javascript'>
+<script type='text/javascript'>
 //<![CDATA[
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all grid items that are supposed to be clickable
-    const gridItems = document.querySelectorAll('.grid-item');
+    const gridList = document.querySelector('.grid-list');
 
-    // Add a click event listener to each grid item
-    gridItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const link = item.querySelector('a.full-link');
-            if (link && link.href) {
+    gridList.addEventListener('click', function(event) {
+        const target = event.target.closest('.grid-item, .category-header');
+        if (!target) return;
+
+        let link;
+        if (target.classList.contains('category-header')) {
+            link = target.querySelector('a.category-link');
+        } else {
+            link = target.querySelector('a.full-link');
+        }
+
+        if (link && link.href) {
+            if (event.ctrlKey || event.metaKey) {
                 window.open(link.href, '_blank');
+            } else {
+                window.location.href = link.href;
             }
-        });
+            event.preventDefault();
+        }
+    });
+});
+//]]>
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+    const imageLink = document.getElementById('randomCategoryLink');
+
+    // Array of pages and more detailed category headers
+    const pages = [
+        { url: 'https://harrisfamilyregister.blogspot.com/p/300-social-sciences-youtube-channels.html', headers: ['#social-sciences-a', '#social-sciences-b', '#social-sciences-c', '#social-sciences-d', '#social-sciences-e', '#social-sciences-f', '#social-sciences-g', '#social-sciences-h', '#social-sciences-i', '#social-sciences-j', '#social-sciences-k', '#social-sciences-l', '#social-sciences-m', '#social-sciences-n', '#social-sciences-o', '#social-sciences-p', '#social-sciences-q', '#social-sciences-r', '#social-sciences-s', '#social-sciences-t', '#social-sciences-u', '#social-sciences-v', '#social-sciences-w', '#social-sciences-x', '#social-sciences-y', '#social-sciences-z'] },
+        { url: 'https://harrisfamilyregister.blogspot.com/p/sports.html', headers: ['#soccer', '#baseball', '#football'] },
+        { url: 'https://harrisfamilyregister.blogspot.com/p/news.html', headers: ['#news-aggregators', '#right-news', '#center-news', '#left-news', '#world-news', '#business-news', '#science-news'] },
+        { url: 'https://harrisfamilyregister.blogspot.com/p/youtube-playlists.html', headers: ['#computer-science', '#philosophy-psychology', '#religion', '#social-sciences', '#language', '#pure-science', '#technology', '#arts-recreation', '#literature', '#history-geography'] },
+        { url: 'https://harrisfamilyregister.blogspot.com/p/youtube-channels.html', headers: ['#technology', '#arts-recreation', '#social-sciences'] }
+    ];
+
+    imageLink.addEventListener('click', function(event) {
+        event.preventDefault();  // Prevent default behavior
+
+        // Select a random page
+        const randomPage = pages[Math.floor(Math.random() * pages.length)];
+
+        // Select a random category header from the selected page
+        const randomHeader = randomPage.headers[Math.floor(Math.random() * randomPage.headers.length)];
+
+        // Redirect to the random page and header
+        window.location.href = randomPage.url + randomHeader;
     });
 });
 //]]>
