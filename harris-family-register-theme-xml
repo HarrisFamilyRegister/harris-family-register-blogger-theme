@@ -14,22 +14,26 @@
     <title><data:view.title.escaped/></title>
     <b:include data='blog' name='all-head-content'/>
 
-    <!-- Favicon -->
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkq8htUkgH2Loos5Atn61IZhRM7fpmkrPtNepKFlIPiA7R2kiLYRdj5blEcZ4EgUk1oBb_6HyaWmVKE-PVUrtpaYzpoOyL3IZz4b4DQ29X5iYnlHRevE4Wo-q_S-vlqsT9nHhGJrIbNcrSd8YjUc7T6jgLkylh1msnN7hQdY7pkWD33VRIpG0XniZDTOU/s1600/16%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='16x16' type='image/png'/>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaAaHxl_6DK1u7O3SqmJkqZ20yUYMNSK0088NLoMbefg4zPuZ7hRL3JKNeeQtlZ0g4_tuqRqLswFI9MrGLnH8Kr7StBTH30rv6bXPgwQwdc8tQwI6UG_CwmcsbNGXbo4PQByuoFqUBxdEPvGXEdD7dmyVrL-DnyHwXlZk8fblqntVoJa5SJwga0TH8/s1600/32%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='32x32' type='image/png'/>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzQhjqiVGH1g5U9W5URxcLsbf3oRI6Ea6UmRYQAjyco7B4TS_boyMHT3So1MUsbgso4pZpkVk-H8qCUWCalE0BjSpzjceXZHmIQk0x0oI9nQG7f8rP47Gf6XbttR5-oSrRe-rFKRDtGBqkfs2tBA_2zdRUSwZufLfsSAa1KmByihD7U6VU_zuSzzyAWHk/s1600/48%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='48x48' type='image/png'/>
+ <!-- Favicon for all browsers -->
+<link href='https://imgur.com/UqBkEKU' rel='icon' sizes='16x16' type='image/png'/>
+<link href='https://imgur.com/QZ7pbY6' rel='icon' sizes='32x32' type='image/png'/>
+<link href='https://imgur.com/ytQONUp' rel='icon' sizes='48x48' type='image/png'/>
+<link href='https://imgur.com/MUpcjur' rel='icon' sizes='192x192' type='image/png'/>
+<link href='https://imgur.com/GHxOhy1' rel='icon' sizes='512x512' type='image/png'/>
 
-    <!-- Apple Touch Icon -->
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyoTZTpbzWDta7VzywPK4sEZiN3Twp_UqgDMYP5-OUjMLIdwwEG62f2IUnr2rAOLzSlV_Q5lfAOqCEvRBjOfm2HTf75w24UcbVsXConxwULsRnzwz9kVQhWu-Agro3RjCaF0tdyQWGZAlSnDWqGyA17t1rElIS8oaZJFmniHlLXGeIr7Z2C1hB6Ae6JUI/s1600/192%20Png%20Harris%20Family%20Logo.png' rel='apple-touch-icon' sizes='180x180'/>
+<!-- Apple Touch Icon (for iOS devices) -->
+<link href='https://imgur.com/km2WxUF' rel='apple-touch-icon' sizes='180x180'/>
 
-    <!-- Android Chrome M39+ with site installed to the homescreen -->
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyoTZTpbzWDta7VzywPK4sEZiN3Twp_UqgDMYP5-OUjMLIdwwEG62f2IUnr2rAOLzSlV_Q5lfAOqCEvRBjOfm2HTf75w24UcbVsXConxwULsRnzwz9kVQhWu-Agro3RjCaF0tdyQWGZAlSnDWqGyA17t1rElIS8oaZJFmniHlLXGeIr7Z2C1hB6Ae6JUI/s1600/192%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='192x192' type='image/png'/>
+<!-- Android Chrome M39+ with site installed to homescreen -->
+<link href='https://imgur.com/MUpcjur' rel='icon' sizes='192x192' type='image/png'/>
 
-    <!-- For PWA -->
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwz4mDSIl9skWS_jvQcwGzpfAWbwTL8wdKeb9kFgLy76QoQkEiR1lSiaUOt4nDeiuJag9J0pjUfzqYjRV-8-0XBgFTqNcs4794ZxID7niMdRfz3N8v29QWR2MQ8-f3JlCfNjdp9y7aPPoop6B92rlzEZPsu-lz3kEurrkWdwmDNMHZTFPItsURSJXbcmg/s320/512%20Png%20Harris%20Family%20Logo.png' rel='icon' sizes='512x512' type='image/png'/>
+<!-- Microsoft Tile for Windows 8.1 and up -->
+<meta content='https://imgur.com/QZ7pbY6' name='msapplication-TileImage'/>
+<meta content='#ffffff' name='msapplication-TileColor'/>
 
-    <!-- Microsoft Tile for Windows 8.1 and up -->
-    <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyoTZTpbzWDta7VzywPK4sEZiN3Twp_UqgDMYP5-OUjMLIdwwEG62f2IUnr2rAOLzSlV_Q5lfAOqCEvRBjOfm2HTf75w24UcbVsXConxwULsRnzwz9kVQhWu-Agro3RjCaF0tdyQWGZAlSnDWqGyA17t1rElIS8oaZJFmniHlLXGeIr7Z2C1hB6Ae6JUI/s1600/192%20Png%20Harris%20Family%20Logo.png' name='msapplication-TileImage'/>
+<!-- Fallback for older browsers -->
+<link href='https://your-hosted-url/favicon.ico' rel='shortcut icon' type='image/x-icon'/>
+
     <meta content='#ffffff' name='msapplication-TileColor'/>
   
 <b:skin><![CDATA[
@@ -876,6 +880,7 @@ a:hover {
     <li><a class='nav-button' href='/p/news.html'>News</a></li>
    <li><a class='nav-button' href='/p/sports.html'>Sports</a></li>
     <li><a class='nav-button' href='/p/youtube-playlists.html'>YouTube Playlists</a></li>
+     <li><a class='nav-button' href='https://harrisfamswatchistory.tumblr.com/'>Our Watch History</a></li>
   </ul>
 </nav>
   </header>
@@ -1012,7 +1017,13 @@ a:hover {
     <p>Master networking, IT, and tech skills with fun tutorials and insights from Network Chuck.</p>
   </a>
 </li>
-
+<li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@NaomiBrockwellTV' rel='noopener noreferrer' target='_blank'>
+    <h3>Naomi Brockwell TV</h3>
+    <img alt='Naomi Brockwell TV Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/2grzLewJ8A5xjZIJDTS5sqTx5YPHWvVPQln0aIuvdnimruGVRQfgnHGI_DmQuC_3Q1Y4KLYU=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore insights on cryptocurrency, technology, and personal freedom with Naomi Brockwell.</p>
+  </a>
+</li>
    <!-- Category: 100 &#8211; Philosophy And Psychology -->
 <li class='grid-item category-header' id='philosophy-and-psychology'>
   <h1>100 &#8211; Philosophy And Psychology</h1>
@@ -1128,6 +1139,20 @@ a:hover {
     <p>Delve into the world of animal ecology and gaming with TierZoo.</p>
   </a>
 </li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@numberphile' rel='noopener noreferrer' target='_blank'>
+    <h3>Numberphile</h3>
+    <img alt='Numberphile Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_nmbQSAGKk1OZCBBf_sPJqLoFfYOVDWRDzALocBjGQtHeI=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Delve into the fascinating world of numbers with engaging videos on math concepts and curiosities.</p>
+  </a>
+</li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@Bozemanscience1' rel='noopener noreferrer' target='_blank'>
+    <h3>Bozeman Science</h3>
+    <img alt='Bozeman Science Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_ljkXoto53QuKX9JtyK16VufZseVYLZiYz61_j_o9IQo3M=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Engaging science videos covering a wide range of topics, perfect for students and lifelong learners.</p>
+  </a>
+</li>
          <!-- Category: 600 &#8211; Technology -->
 <li class='grid-item category-header' id='technology'>
   <h1>600 &#8211; Technology</h1>
@@ -1222,6 +1247,14 @@ a:hover {
     <p>A YouTube channel exploring the history of ancient civilizations and their collapse, providing in-depth narratives and visuals.</p>
   </a>
 </li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@HistoriaCivilis/featured' rel='noopener noreferrer' target='_blank'>
+    <h3>Historia Civilis</h3>
+    <img alt='Historia Civilis Logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_n28SRk_JeipTsTESEnZjAVq6Ycq-jM5VzWNOqNtMt-0lg=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore ancient history through engaging narratives and insightful analyses of historical events.</p>
+  </a>
+</li>
+
  <!-- Additional channels can go here -->
               </ul> 
 <b:include data='post' name='post'/>
@@ -1286,6 +1319,21 @@ a:hover {
     <p>A respected business-focused newspaper known for its in-depth reporting and analysis.</p>
   </a>
 </li>
+    <li class='grid-item'>
+  <a class='full-link' href='https://www.semafor.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Semafor</h3>
+    <img alt='Semafor Logo' class='grid-item-icon' src='https://static.semafor.com/_next/static/media/homepage-semafor-text-logo-fos.a1e5dbe4.svg'/>
+    <p>A modern news organization focused on delivering insightful and engaging journalism.</p>
+  </a>
+</li>
+<li class='grid-item'>
+  <a class='full-link' href='https://en.wikinews.org/wiki/Main_Page' rel='noopener noreferrer' target='_blank'>
+    <h3>WikiNews</h3>
+    <img alt='WikiNews Logo' class='grid-item-icon' src='https://www.wikinews.org/portal/wikinews.org/assets/img/Wikinews-logo-tiles_1x.png'/>
+    <p>A collaborative news source that allows anyone to report news and share information.</p>
+  </a>
+</li>
+
     <li class='grid-item category-header' id='left-news'>
   <a class='category-link' href='/p/left-news.html'>
     <h1>Left News</h1>
@@ -1721,6 +1769,7 @@ a:hover {
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>true</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'/>
       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
@@ -2382,6 +2431,15 @@ a:hover {
   <div id='socket'>
     <div class='container'>
       <div class='footer-content'>
+         <div class='footer-column'>
+          <h3>Socials</h3>
+          <div class='footer-links'>
+             <a href='https://www.youtube.com/@harrisfamilyregister' rel='noopener noreferrer' target='_blank'>YouTube</a>
+            <a href='https://x.com/FamilyRegister' rel='noopener noreferrer' target='_blank'>Twitter</a>
+            <a href='https://www.reddit.com/user/HarrisFamilyRegister/' rel='noopener noreferrer' target='_blank'>Reddit</a>
+            <a href='https://www.tumblr.com/harrisfamilyregister' rel='noopener noreferrer' target='_blank'>Tumblr</a>
+          </div>
+        </div>
         <div class='footer-column'>
           <h3>Quick Links</h3>
           <div class='footer-links'>
