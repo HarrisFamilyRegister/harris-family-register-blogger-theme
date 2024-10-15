@@ -1024,6 +1024,20 @@ a:hover {
     <p>Explore insights on cryptocurrency, technology, and personal freedom with Naomi Brockwell.</p>
   </a>
 </li>
+ <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@rossmanngroup' rel='noopener noreferrer' target='_blank'>
+    <h3>Louis Rossmann</h3>
+    <img alt='Louis Rossmann logo' class='grid-item-icon' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSODlSB4ACLt0t4drfuSO7lpDQzvPWwEsI7Og&amp;s'/>
+    <p>Dive into thought-provoking discussions on philosophy, psychology, and personal growth with Louis Rossmann.</p>
+  </a>
+</li>
+              <li class='grid-item'>
+  <a class='full-link' href='https://www.youtube.com/@MentalOutlaw' rel='noopener noreferrer' target='_blank'>
+    <h3>Mental Outlaw</h3>
+    <img alt='Mental Outlaw logo' class='grid-item-icon' src='https://yt3.googleusercontent.com/ytc/AIdro_n6dUcc6YbkWa540dbaWzbLi44bq0h-hGNEop2BhOQ6uHY=s160-c-k-c0x00ffffff-no-rj'/>
+    <p>Explore critical thinking, media analysis, and personal empowerment with Mental Outlaw.</p>
+  </a>
+</li>
    <!-- Category: 100 &#8211; Philosophy And Psychology -->
 <li class='grid-item category-header' id='philosophy-and-psychology'>
   <h1>100 &#8211; Philosophy And Psychology</h1>
@@ -1365,6 +1379,20 @@ a:hover {
     <h3>The Grayzone</h3>
     <img alt='The Grayzone Logo' src='https://thegrayzone.com/wp-content/uploads/2020/08/the-grayzone-logo.png' style='width:100px; height:auto;'/>
     <p>A platform providing investigative journalism and critiques of U.S. foreign policy and media narratives.</p>
+  </a>
+</li>
+    <li class='grid-item'>
+  <a class='full-link' href='https://www.axios.com/' rel='noopener noreferrer' target='_blank'>
+    <h3>Axios</h3>
+    <img alt='Axios Logo' src='https://www.cjr.org/wp-content/uploads/2017/01/jim_vandehei_axios.png' style='width:100px; height:auto;'/>
+    <p>A news website known for its concise reporting and focus on politics, technology, and business.</p>
+  </a>
+</li>
+    <li class='grid-item'>
+  <a class='full-link' href='https://www.pbs.org/newshour/' rel='noopener noreferrer' target='_blank'>
+    <h3>PBS News Hour</h3>
+    <img alt='PBS News Hour Logo' class='grid-item-icon' src='https://image.pbs.org/bento3-prod/kcpt/2630e8d92e_PBS%20NewsHour_Vertical_Reverse%20Logo_1692x1812.png'/>
+    <p>PBS News Hour provides in-depth analysis and coverage of current events, offering a balanced view on important issues affecting the world today.</p>
   </a>
 </li>
       <li class='grid-item category-header' id='world-news'>
